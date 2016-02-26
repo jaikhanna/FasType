@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
-    var sentences = ["hello world", "HackSC", "Two Sigma","bonjour", "Apple", "Microsoft", "jai"]
+    var sentences = ["hello world", "HackSC", "Two Sigma","bonjour", "Apple", "Microsoft", "jai","pranshu"]
        
     @IBOutlet weak var questionString: UILabel!
     @IBOutlet weak var userInput: UITextField!
