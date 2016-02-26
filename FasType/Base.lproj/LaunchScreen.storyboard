@@ -8,7 +8,7 @@
         <!--FasType-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController title="FasType" id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController title="FasType" wantsFullScreenLayout="YES" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -17,26 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1313232782" translatesAutoresizingMaskIntoConstraints="NO" id="pWO-bu-MYf">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="launchScreenBack" translatesAutoresizingMaskIntoConstraints="NO" id="PxU-MG-gJY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <animations/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type as fast and as accurately as you can" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-PZ-tu2">
+                                <rect key="frame" x="22" y="537" width="372" height="52"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.00431972152" green="0.88881931420000004" blue="0.95166508839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FasType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PW-Ya-iPh">
+                                <rect key="frame" x="8" y="53" width="398" height="84"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.81547900880000002" green="0.013416022749999999" blue="0.099122228389999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.81547900880000002" green="0.013416022749999999" blue="0.099122228389999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pWO-bu-MYf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bvk-nF-1lB"/>
-                            <constraint firstItem="pWO-bu-MYf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gdN-BF-DZA"/>
+                            <constraint firstItem="PxU-MG-gJY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F7s-bG-yfm"/>
+                            <constraint firstItem="iPS-PZ-tu2" firstAttribute="centerX" secondItem="PxU-MG-gJY" secondAttribute="centerX" id="LLU-bw-hxB"/>
+                            <constraint firstItem="3PW-Ya-iPh" firstAttribute="centerX" secondItem="PxU-MG-gJY" secondAttribute="centerX" id="ZPK-D6-dMe"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-71" y="381"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1313232782" width="141" height="100"/>
+        <image name="launchScreenBack" width="132" height="199"/>
     </resources>
 </document>
