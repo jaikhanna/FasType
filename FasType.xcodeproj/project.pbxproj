@@ -18,6 +18,7 @@
 		4868E47E1BF8181200744ED1 /* FasTypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4868E47D1BF8181200744ED1 /* FasTypeUITests.swift */; };
 		487355421BF89E8E0098BAC3 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487355411BF89E8E0098BAC3 /* InstructionsViewController.swift */; };
 		487D2C141BF827DA00D5C8C0 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D2C131BF827DA00D5C8C0 /* ScoreViewController.swift */; };
+		48F1D17A1C841FFA00A3FC77 /* MPCHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4868E47F1BF8181200744ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487355411BF89E8E0098BAC3 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		487D2C131BF827DA00D5C8C0 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				4868E45D1BF8181200744ED1 /* AppDelegate.swift */,
 				4868E45F1BF8181200744ED1 /* QuestionViewController.swift */,
+				48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */,
 				4868E4611BF8181200744ED1 /* Main.storyboard */,
 				483FB0271BF8B40900CE7F6F /* HumanityThanksViewController.swift */,
 				483FB0251BF8AB9900CE7F6F /* HelpHumanityViewController.swift */,
@@ -276,6 +279,7 @@
 				4868E4601BF8181200744ED1 /* QuestionViewController.swift in Sources */,
 				4868E45E1BF8181200744ED1 /* AppDelegate.swift in Sources */,
 				487355421BF89E8E0098BAC3 /* InstructionsViewController.swift in Sources */,
+				48F1D17A1C841FFA00A3FC77 /* MPCHandler.swift in Sources */,
 				487D2C141BF827DA00D5C8C0 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

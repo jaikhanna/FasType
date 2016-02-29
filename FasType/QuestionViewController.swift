@@ -26,8 +26,10 @@ class QuestionViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         [userInput .becomeFirstResponder()]
         
@@ -49,7 +51,7 @@ class QuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "inputToScore" {
             
             if (userInput.text!.isEmpty) {
