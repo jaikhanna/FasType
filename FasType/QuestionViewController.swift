@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class QuestionViewController: UIViewController {
+    
+    
     
     var sentences = ["hello world", "HackSC", "Two Sigma","bonjour", "Apple", "Microsoft","pranshu"]
        
@@ -18,18 +21,15 @@ class QuestionViewController: UIViewController {
     @IBOutlet var countingLabel: UILabel!
     var timer = NSTimer()
     var counter = 0
-    
-    
+    var appDelegate:AppDelegate!
     
     @IBAction func submitResponse(sender: UIButton) {
         
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view, typically from a nib.
         [userInput .becomeFirstResponder()]
         
@@ -56,15 +56,24 @@ class QuestionViewController: UIViewController {
             
             if (userInput.text!.isEmpty) {
                 
-                let alert = UIAlertView()
-                alert.title = "Oops"
-                alert.message = "I think you forgot to type"
-                alert.addButtonWithTitle("Start typing!")
-                alert.show()
+                //Newer way to use an alert
+                let alert = UIAlertController(title: "Oops", message: "You must type something", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+
+                alert.addAction(
+                    UIAlertAction(title: "Start Typing!", style: UIAlertActionStyle.Default) { (action) -> Void in
+                        print("")})
+                
+//                Deprecated way
+//                let alert = UIAlertView()
+//                alert.title = "Oops"
+//                alert.message = "I think you forgot to type"
+//                alert.addButtonWithTitle("Start typing!")
+//                alert.show()
                 
                 return false
             }
-                
             else {
                 return true
             }
@@ -84,6 +93,7 @@ class QuestionViewController: UIViewController {
                 svc.answer = userInput.text
                 svc.question = questionString.text
                 svc.totalTime = countingLabel.text
+                svc.appDelegate = self.appDelegate
             }
     }
     

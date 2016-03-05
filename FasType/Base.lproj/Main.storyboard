@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="350"/>
+            <point key="canvasLocation" x="-1607" y="994"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="3vr-0d-Vxc">
@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFi-P9-Gz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="350"/>
+            <point key="canvasLocation" x="-1859" y="2066"/>
         </scene>
         <!--HelpHumanityViewController-->
         <scene sceneID="GLi-1A-QQI">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Scr-Kw-fwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2557" y="350"/>
+            <point key="canvasLocation" x="-927" y="1650"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0yP-5e-W75">
@@ -240,25 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xK3-20-FdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3265" y="350"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7kD-DJ-ao3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fMd-bb-dXi" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3HT-e3-gu6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cGl-qb-df2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-pt-ACv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="201" y="350"/>
+            <point key="canvasLocation" x="289" y="586"/>
         </scene>
         <!--InstructionsViewController-->
         <scene sceneID="e6J-uK-qQt">
@@ -278,7 +260,7 @@
                                 <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl">
                                 <rect key="frame" x="232" y="336" width="136" height="62"/>
                                 <color key="backgroundColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -286,7 +268,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fMd-bb-dXi" kind="show" identifier="startGame" id="ji9-bP-h8U"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toQuestion" id="9pC-Fo-Uu9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="All you have to do is.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-sA-H9p">
@@ -295,8 +277,8 @@
                                 <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-59-2RA">
-                                <rect key="frame" x="271" y="430" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-59-2RA">
+                                <rect key="frame" x="271" y="451" width="59" height="30"/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
                                     <action selector="connectWithPlayer:" destination="Yye-ks-Egl" eventType="touchUpInside" id="CLz-Ur-H6S"/>
@@ -305,20 +287,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="I34-HJ-NIt" firstAttribute="top" secondItem="b3a-59-2RA" secondAttribute="bottom" constant="140" id="CEd-Ak-iMq"/>
+                            <constraint firstItem="b3a-59-2RA" firstAttribute="top" secondItem="IkQ-9a-gHl" secondAttribute="bottom" constant="53" id="0w6-99-khk"/>
+                            <constraint firstItem="b3a-59-2RA" firstAttribute="centerX" secondItem="IkQ-9a-gHl" secondAttribute="centerX" id="Dt5-vz-qea"/>
                             <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="GqX-mj-NZz"/>
+                            <constraint firstItem="I34-HJ-NIt" firstAttribute="top" secondItem="b3a-59-2RA" secondAttribute="bottom" constant="119" id="T5V-8t-Yvh"/>
                             <constraint firstItem="MmL-sA-H9p" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="TNM-wn-bl4"/>
-                            <constraint firstItem="b3a-59-2RA" firstAttribute="centerY" secondItem="uRJ-HP-2Cm" secondAttribute="centerY" id="V4m-Cq-m8E"/>
                             <constraint firstItem="Uwo-Uc-Cb6" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Xdp-SU-g8d"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4C-Ht-xRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="350"/>
+            <point key="canvasLocation" x="-2407" y="902"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cGl-qb-df2"/>
+        <segue reference="9pC-Fo-Uu9"/>
     </inferredMetricsTieBreakers>
 </document>
