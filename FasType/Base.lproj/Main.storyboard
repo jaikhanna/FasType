@@ -23,10 +23,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAg-y1-XlK">
-                                <rect key="frame" x="49" y="152" width="503" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAg-y1-XlK">
+                                <rect key="frame" x="49" y="123" width="503" height="140"/>
                                 <color key="backgroundColor" red="0.31305152177810669" green="0.78205901384353638" blue="0.9358251690864563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -120,22 +120,32 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Vr-ccZ">
-                                <rect key="frame" x="190" y="522" width="220" height="23"/>
+                                <rect key="frame" x="190" y="508" width="220" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Start Over">
+                                <state key="normal" title="New Game">
                                     <color key="titleColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="resetGame" id="BHa-AL-GEI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxw-7V-Dz3">
+                                <rect key="frame" x="263" y="562" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="bTW-0L-SUV" eventType="touchUpInside" id="geG-ED-vvZ"/>
+                                    <segue destination="FcH-fu-YlQ" kind="show" id="Vaw-PA-Nnm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="P26-J6-drF"/>
+                            <constraint firstItem="bxw-7V-Dz3" firstAttribute="top" secondItem="rRE-Qv-dKy" secondAttribute="bottom" constant="542" id="XBj-fL-7Qf"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
                             <constraint firstItem="u7Y-A0-Fuu" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="cLP-Yf-nsN"/>
                             <constraint firstItem="yl8-sN-TdY" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ulU-CG-mzQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bxw-7V-Dz3" secondAttribute="trailing" constant="242" id="zj4-tN-A9W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -265,7 +275,7 @@
                                 <color key="backgroundColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Play Now!">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toQuestion" id="9pC-Fo-Uu9"/>
@@ -302,6 +312,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9pC-Fo-Uu9"/>
+        <segue reference="Vaw-PA-Nnm"/>
+        <segue reference="BHa-AL-GEI"/>
     </inferredMetricsTieBreakers>
 </document>

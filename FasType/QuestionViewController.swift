@@ -14,7 +14,7 @@ class QuestionViewController: UIViewController {
     
     
     var sentences = ["hello world", "HackSC", "Two Sigma","bonjour", "Apple", "Microsoft","pranshu"]
-       
+    
     @IBOutlet weak var questionString: UILabel!
     @IBOutlet weak var userInput: UITextField!
     
@@ -22,6 +22,7 @@ class QuestionViewController: UIViewController {
     var timer = NSTimer()
     var counter = 0
     var appDelegate:AppDelegate!
+    var randomQuestionSentence: String = ""
     
     @IBAction func submitResponse(sender: UIButton) {
         
@@ -29,6 +30,9 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //add notification observer
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleReceivedDataWithNotification:", name: "MPC_DidReceiveDataNotification", object: nil)
 
         // Do any additional setup after loading the view, typically from a nib.
         [userInput .becomeFirstResponder()]
@@ -36,15 +40,60 @@ class QuestionViewController: UIViewController {
         countingLabel.text = String(counter)
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         
-        self.navigationItem.setHidesBackButton(true, animated:true);
-        var randomIndex = Int(arc4random_uniform(UInt32(sentences.count)))
+//        self.navigationItem.setHidesBackButton(true, animated:true);
+//        var randomIndex = Int(arc4random_uniform(UInt32(sentences.count)))
+//        
+//        if(randomIndex>0)
+//        {
+//            randomIndex -= 1
+//        }
+//      
         
-        if(randomIndex>0)
-        {
-            randomIndex -= 1
-        }
-        questionString.text = sentences[randomIndex]
+        //get sentence from server
+        var questionSentence: Dictionary<String, String>? = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=getQuestion")
+        
+        randomQuestionSentence = questionSentence!["randomQuestionSentence"]!
+        
+        
+//        randomQuestionSentence = createRandomSentence()
+        questionString.text = randomQuestionSentence
+        
+        //send question sentence to all players
+//        callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=update")
+//        let messageDict = ["randomQuestionSentence":randomQuestionSentence]
+//        
+//        do{
+//            let messageData = try? NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted)
+//            
+//            try? appDelegate.mpcHandler.session.sendData(messageData!, toPeers: appDelegate.mpcHandler.session.connectedPeers, withMode: MCSessionSendDataMode.Reliable)
+//            
+//        }catch let error as NSError {
+//            print("An error occurred: \(error)")
+//        }
     }
+    
+    
+    
+    
+    //function to handle sentence receipt
+//    func handleReceivedDataWithNotification(notification:NSNotification){
+//        
+//        //extract message from notification
+//        let userInfo = notification.userInfo! as Dictionary
+//        let receivedData:NSData = userInfo["data"] as! NSData
+//        
+//        let message = try? NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+//        
+////        let senderPeerId:MCPeerID = userInfo["peerID"] as! MCPeerID
+////        let senderDisplayName = senderPeerId.displayName
+//        
+//        
+//        //set received sentence
+//        randomQuestionSentence = message!.objectForKey("randomQuestionSentence")! as! String
+//        questionString.text = randomQuestionSentence
+//
+//    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -84,6 +133,30 @@ class QuestionViewController: UIViewController {
     }
     
     
+//    func callToScript(url: String){
+//        var data = NSData(contentsOfURL: NSURL(string: url)!)
+////        print("data: \(data)")
+//    }
+    
+    func callToScript(url: String) -> Dictionary<String,String>? {
+        
+        let data = NSData(contentsOfURL: NSURL(string: url)!)
+        do {
+            
+            var jsonArray = try? NSJSONSerialization.JSONObjectWithData(data!, options: [NSJSONReadingOptions.MutableContainers, NSJSONReadingOptions.AllowFragments]) as? Dictionary<String, String>
+            
+            //            print("json se count := \(jsonArray!!["count"])")
+            if jsonArray == nil{
+                jsonArray = ["":""]
+            }
+            return jsonArray!;
+            
+        }catch let error as NSError {
+            print(error.localizedDescription)
+            return nil;
+        }
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
             if segue.identifier == "inputToScore"{
@@ -94,6 +167,8 @@ class QuestionViewController: UIViewController {
                 svc.question = questionString.text
                 svc.totalTime = countingLabel.text
                 svc.appDelegate = self.appDelegate
+//                callToScript("http://jaikhanna.byethost7.com/Jai_Khanna_Profile/Projects/FasType/gameStatus.php?q=update")
+                let callResult = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=update")
             }
     }
     
