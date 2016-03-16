@@ -294,6 +294,31 @@ class ScoreViewController: UIViewController {
                         print("")
                         print(self.playerScores)
                         
+                        //testing resultsView
+                        
+                        var resultsMessage: String = ""
+                        
+                        for (score1, playerId1) in self.playerScores {
+                            
+                            resultsMessage += "\(playerId1.displayName) scored \(score1)% \r\n"
+                        }
+                        
+                        print("resultsMessage: \(resultsMessage)")
+                        
+                        let alert = UIAlertController(title: "Results", message: resultsMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in })
+                        
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        
+                        
+                        //testing ends here
+                        
+                        
+                        
+                        
+                        
+                        
                         let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
                     })
                 
@@ -344,12 +369,6 @@ class ScoreViewController: UIViewController {
             print(error1)
         }
     }
-//
-//    @IBAction func newGame(sender: AnyObject) {
-//        newGame()
-//    }
-
-    
     
     func callToScript(url: String) -> Dictionary<String,String>? {
         
@@ -370,35 +389,23 @@ class ScoreViewController: UIViewController {
         }
     }
     
-   func callToGameStatus(){
-////        let url:NSURL = NSURL(string: "http://jaikhanna.byethost7.com/Jai_Khanna_Profile/Projects/FasType/gameStatus.php?q=retrieve")!
-//        
-//        let url:NSURL = NSURL(string: "https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=retrieve")!
-//        let session = NSURLSession.sharedSession()
-//        
-//        let request = NSMutableURLRequest(URL: url)
-//        request.HTTPMethod = "POST"
-//        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
-//        
-//        let paramString = "data=Hello"
-//        request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
-//        
-//        let task = session.dataTaskWithRequest(request) {
-//            (
-//            let data, let response, let error) in
-//            
-//            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
-//                print("error")
-//                return
-//            }
-//            
-//            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-//            print("count: \(dataString)")
-//            
-//        }
-//        
-//        task.resume()
-//        
+    //button to view the results
+    @IBAction func viewResults(sender: AnyObject) {
+        //create message string with the results
+        var resultsMessage: String = ""
+        
+        for (score, playerId) in playerScores {
+            //            print("\(score): \(playerId)")
+            resultsMessage += "\(playerId.displayName) scored \(score)% \r\n"
+        }
+        
+        print("resultsMessage: \(resultsMessage)")
+        
+        let alert = UIAlertController(title: "Results", message: resultsMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in })
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){

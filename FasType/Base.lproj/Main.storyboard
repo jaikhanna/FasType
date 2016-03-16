@@ -129,23 +129,28 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="resetGame" id="BHa-AL-GEI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxw-7V-Dz3">
-                                <rect key="frame" x="263" y="562" width="75" height="30"/>
-                                <state key="normal" title="New Game"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-v5-bA1">
+                                <rect key="frame" x="0.0" y="562" width="600" height="38"/>
+                                <color key="backgroundColor" red="0.2280174379028419" green="0.94308517880520848" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Results">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="newGame:" destination="bTW-0L-SUV" eventType="touchUpInside" id="geG-ED-vvZ"/>
-                                    <segue destination="FcH-fu-YlQ" kind="show" id="Vaw-PA-Nnm"/>
+                                    <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="P26-J6-drF"/>
-                            <constraint firstItem="bxw-7V-Dz3" firstAttribute="top" secondItem="rRE-Qv-dKy" secondAttribute="bottom" constant="542" id="XBj-fL-7Qf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tgt-v5-bA1" secondAttribute="trailing" id="VBw-aW-qK6"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tgt-v5-bA1" secondAttribute="trailing" constant="-20" id="bDi-Uv-XM1"/>
                             <constraint firstItem="u7Y-A0-Fuu" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="cLP-Yf-nsN"/>
+                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="top" secondItem="rRE-Qv-dKy" secondAttribute="bottom" constant="542" id="cR0-gO-QYb"/>
+                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="leading" secondItem="FeD-U7-FHG" secondAttribute="leadingMargin" id="mYO-DF-plQ"/>
                             <constraint firstItem="yl8-sN-TdY" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ulU-CG-mzQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bxw-7V-Dz3" secondAttribute="trailing" constant="242" id="zj4-tN-A9W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -312,7 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vaw-PA-Nnm"/>
         <segue reference="BHa-AL-GEI"/>
     </inferredMetricsTieBreakers>
 </document>
