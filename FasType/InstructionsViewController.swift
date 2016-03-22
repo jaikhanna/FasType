@@ -9,10 +9,15 @@
 //import Foundation
 import UIKit
 import MultipeerConnectivity
+import JTFadingInfoView
+import Material
 
 class InstructionsViewController: UIViewController, MCBrowserViewControllerDelegate{
     
     var appDelegate:AppDelegate!
+    
+    
+    @IBOutlet weak var PlayNow: FlatButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,20 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
         appDelegate.mpcHandler.setupSession()
         appDelegate.mpcHandler.advertiseSelf(true)
         
+        PlayNow.setTitle("NewPlay", forState: .Normal)
+        PlayNow.titleLabel!.font = RobotoFont.mediumWithSize(32)
+        PlayNow.setTitleColor(UIColor.greenColor(), forState: .Normal)
         
+        PlayNow.backgroundColor = MaterialColor.indigo.darken1
+        
+        view.backgroundColor = MaterialColor.lightBlue.base
+        
+//        let PlayNow: FlatButton = FlatButton(frame: CGRectMake(107, 107, 200, 65))
+//        PlayNow.setTitle("Flat", forState: .Normal)
+//        PlayNow.titleLabel!.font = RobotoFont.mediumWithSize(32)
+        
+        // Add button to UIViewController.
+//        view.addSubview(PlayNow)
         
         //testing data transfer
 //        NSNotificationCenter.defaultCenter().addObserver(self, selector: "peerChangedStateWithNotification:", name: "MPC_DidChangeStateNotification", object: nil)

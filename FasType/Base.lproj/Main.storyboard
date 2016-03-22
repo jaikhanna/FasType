@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -275,12 +275,12 @@
                                 <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="PlayNow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl" customClass="FlatButton" customModule="Material">
                                 <rect key="frame" x="232" y="336" width="136" height="62"/>
-                                <color key="backgroundColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="tintColor" red="0.9993455497" green="0.37188428690000003" blue="0.25876833189999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play Now!">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.99934554973821987" green="0.37188428691533693" blue="0.25876833189485804" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toQuestion" id="9pC-Fo-Uu9"/>
@@ -310,6 +310,9 @@
                             <constraint firstItem="Uwo-Uc-Cb6" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Xdp-SU-g8d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PlayNow" destination="IkQ-9a-gHl" id="bw0-va-YIr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4C-Ht-xRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,6 +320,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BHa-AL-GEI"/>
+        <segue reference="9pC-Fo-Uu9"/>
     </inferredMetricsTieBreakers>
 </document>
