@@ -81,77 +81,146 @@
                         <viewControllerLayoutGuide type="top" id="rRE-Qv-dKy"/>
                         <viewControllerLayoutGuide type="bottom" id="lel-QF-Z9e"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FeD-U7-FHG">
+                    <view key="view" contentMode="scaleToFill" id="FeD-U7-FHG" customClass="FabButton" customModule="Material">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl8-sN-TdY">
-                                <rect key="frame" x="190" y="65" width="220" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drC-Zp-bCu">
-                                <rect key="frame" x="80" y="222" width="441" height="58"/>
+                                <rect key="frame" x="69" y="261" width="441" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4up-sV-7U6">
-                                <rect key="frame" x="80" y="288" width="441" height="55"/>
+                                <rect key="frame" x="69" y="327" width="441" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-A0-Fuu">
-                                <rect key="frame" x="80" y="351" width="441" height="60"/>
+                                <rect key="frame" x="69" y="390" width="441" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V20-R6-RTc">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V20-R6-RTc">
                                 <rect key="frame" x="239" y="448" width="123" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Help Humanity">
-                                    <color key="titleColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="FcH-fu-YlQ" kind="show" identifier="helpHumanity" id="fUf-Pq-dXw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Vr-ccZ">
-                                <rect key="frame" x="190" y="508" width="220" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="New Game">
-                                    <color key="titleColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="resetGame" id="BHa-AL-GEI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-v5-bA1">
-                                <rect key="frame" x="0.0" y="562" width="600" height="38"/>
-                                <color key="backgroundColor" red="0.2280174379028419" green="0.94308517880520848" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-v5-bA1" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="192" y="579" width="218" height="45"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="imb-L1-fig"/>
+                                    <constraint firstAttribute="height" constant="45" id="vtL-4b-yFa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Results">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.9882352941176471" green="0.41119035813338489" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ScoreCard-1" translatesAutoresizingMaskIntoConstraints="NO" id="t7w-7H-IG4">
+                                <rect key="frame" x="126" y="28" width="350" height="80"/>
+                                <color key="tintColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="XIO-g8-aBS"/>
+                                    <constraint firstAttribute="height" constant="80" id="jPX-7i-J2X"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="trophy2" translatesAutoresizingMaskIntoConstraints="NO" id="Tco-yd-mdt">
+                                <rect key="frame" x="255" y="136" width="93" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="B8p-Sn-McI"/>
+                                    <constraint firstAttribute="width" constant="93" id="Ce7-CU-V49"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Vr-ccZ" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="272" y="506" width="58" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="lvG-Kt-w26"/>
+                                    <constraint firstAttribute="width" constant="58" id="t5q-Dn-555"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1110" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="39" height="25"/>
+                                <state key="normal" backgroundImage="replay-512-3">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.98823529409999999" green="0.41119035809999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="resetGame" id="BHa-AL-GEI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="P26-J6-drF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tgt-v5-bA1" secondAttribute="trailing" id="VBw-aW-qK6"/>
+                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="0kV-y9-f0c"/>
+                            <constraint firstItem="Tco-yd-mdt" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="28t-pE-IrL"/>
+                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="Rl3-xL-zZV"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tgt-v5-bA1" secondAttribute="trailing" constant="-20" id="bDi-Uv-XM1"/>
                             <constraint firstItem="u7Y-A0-Fuu" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="cLP-Yf-nsN"/>
-                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="top" secondItem="rRE-Qv-dKy" secondAttribute="bottom" constant="542" id="cR0-gO-QYb"/>
-                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="leading" secondItem="FeD-U7-FHG" secondAttribute="leadingMargin" id="mYO-DF-plQ"/>
-                            <constraint firstItem="yl8-sN-TdY" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ulU-CG-mzQ"/>
+                            <constraint firstItem="t7w-7H-IG4" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="pO1-yn-jHa"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="misMatch" destination="drC-Zp-bCu" id="x0L-PP-wn7"/>
@@ -363,10 +432,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ScoreCard-1" width="428" height="80"/>
         <image name="cooltext173809073720524" width="424" height="116"/>
         <image name="play-1" width="127" height="124"/>
+        <image name="replay-512-3" width="451" height="404"/>
+        <image name="trophy2" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9pC-Fo-Uu9"/>
+        <segue reference="BHa-AL-GEI"/>
     </inferredMetricsTieBreakers>
 </document>
