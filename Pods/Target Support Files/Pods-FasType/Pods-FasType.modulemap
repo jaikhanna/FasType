@@ -1,0 +1,6 @@
+framework module Pods_FasType {
+  umbrella header "Pods-FasType-umbrella.h"
+
+  export *
+  module * { export * }
+}

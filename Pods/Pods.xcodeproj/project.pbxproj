@@ -1,0 +1,1036 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		036D6070F1C809A1BC6738C52C827D34 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF54375DDA56FBDB883E591B94E5B64 /* MenuView.swift */; };
+		09C82839354603A46715889A1A478152 /* FabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791FE29F4557ABCE10D41950A7DE86B /* FabButton.swift */; };
+		0DDD1FB609C947D9E94DB15B754EAE79 /* Material+UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28201CE140DBA5C58C52A8906302C1D5 /* Material+UIImage+Size.swift */; };
+		141732172A32A45D318CE1BD592F1DF5 /* Material+UIImage+PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB003F8E0E09879C76974BD10B70F51 /* Material+UIImage+PhotoLibrary.swift */; };
+		141F98E84B6BAAF789F458744C32491E /* CaptureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCF73EAA44A3B3CE4F5FBC5E0FB1BF /* CaptureSession.swift */; };
+		16F77D0E7CF1D6A7471F4DF2BC936834 /* MaterialPulseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CC7C812082CE74F6C7A691F3F3D00 /* MaterialPulseCollectionViewCell.swift */; };
+		18928F8C7B6436EF7561B38F39356774 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DE7F485798FA8DEDF2C6D5E72CA94 /* CapturePreviewView.swift */; };
+		1EBE51236C1D219BF2EFE44F968ED877 /* MaterialTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBC2425D50A9DEE35E02F01E60BB50 /* MaterialTransitionAnimation.swift */; };
+		1F95E4E11EE9C69E0B8FABA9F46F017E /* Material+UIImage+Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5EEC16999218C6F676BFB496AB780C /* Material+UIImage+Blank.swift */; };
+		2052D8E483B84C043565829345A05C35 /* MaterialCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D14031625DC758A73105D6D7CA76BB /* MaterialCollectionView.swift */; };
+		20A5958F2B94D6DE18B898ABF90558E2 /* Material+UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E121ABE945C05817A5AAD327162E3BB /* Material+UIImage+Color.swift */; };
+		20F992CC069BD47F212CBBC0C497B0FC /* TextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EAE75504289D20ABA5560CB65E8479 /* TextStorage.swift */; };
+		27520904753EDA6C0CE81C3D46C9C37F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8709DC9233B602BF7D8AD47379F79A5 /* MenuViewController.swift */; };
+		288835CFF80ADE0010A4E1436D772230 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F71234B84A469AC6CA3615DE7596B8 /* MaterialButton.swift */; };
+		29043037B7733D59876B3CFA6AF64828 /* MaterialLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C759AFEF89BE7E2F12A19DE4BA244F /* MaterialLayer.swift */; };
+		29077184BAC1AC97360A929FC9BFDA7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		31A1BB80CE5181F096C2D7FA9F160470 /* Material+UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF8CAAC8A7DB0612FB827A61CEAC98 /* Material+UIImage+Crop.swift */; };
+		35ACF15E27D84BEDB4E55D4376F92E96 /* Pods-FasType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C77EE6BBCAE02BE73B98EB2DE2CDBD03 /* Pods-FasType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3912236D63F8ED0D146D5620EBE8F04F /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1BE2B6DB56F4747E22848CF0D044A /* MaterialCollectionViewCell.swift */; };
+		3DDB25D6357DB92F5A34B7D9E8F1667C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CF524F0656342ED7D13272CEBEB22 /* NavigationController.swift */; };
+		3E1CA57169BA2488AB43D07A2B30F152 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C13FEA95664AC823640F1F875A89D07 /* NavigationBarViewController.swift */; };
+		40E13501D6B82470BAF7378157AE4079 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50423B3AD300D2060D71472C87AE7E6C /* Menu.swift */; };
+		434E57E3E1F13E54FD8BA4ADF615C7F0 /* MaterialFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77595D36B937B34F751F18E323DEB9AA /* MaterialFont.swift */; };
+		48D9D7A9C3C4A472CF75044B793C90DC /* Material+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A7DE06220C039604C5D348F47A86B0 /* Material+UIFont.swift */; };
+		4C0F443171592949160E2B718E598805 /* MaterialBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4AD3B10D14E73BD4BE1FE65A99667C /* MaterialBasicAnimation.swift */; };
+		4E4E7B49F9763378C80FF5DE1BE7AC5E /* MaterialAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A69C9E08BFB3C105530AABAA1FF7A /* MaterialAnimation.swift */; };
+		507A88A594FDF11FA402EEFE7A5724F4 /* StatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699704F6286B1A077A5EA54DCC40677 /* StatusBarViewController.swift */; };
+		5105168534F5E1F3E2FBF1F9403D4985 /* MaterialCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9F6B71A5FE31F76B2EB20682E81786 /* MaterialCollectionViewDataSource.swift */; };
+		5640BC42AF157E5D6EB51E7EAC59789D /* Material-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F264A6B70B2832B083C6F3BD489A2 /* Material-dummy.m */; };
+		5712A85595BABB1875CCB085B727ECE8 /* MaterialLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF6FB06F8B775810F9111AEC0B8D24 /* MaterialLabel.swift */; };
+		57C503D37014357010AA8D3D04EE133E /* MaterialBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613C76AE86566023E714FDD41BF5C40E /* MaterialBorder.swift */; };
+		589F90FD2D61469B4862F331CE0A9C52 /* MaterialDataSourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A106A62F4128D6A2FA5B91378C0A8 /* MaterialDataSourceItem.swift */; };
+		58AE7957DF2483B3BA166D094BB97C7A /* MaterialShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523E3C8E4AF359AF7BC0AD9F87B38BA /* MaterialShape.swift */; };
+		5948F868B00843D9BE2915F98A5BB734 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E972B332C595449DB1F583303806A2F /* NavigationBar.swift */; };
+		60485CFD4EEF7EF79762C11C9FCA94F2 /* MaterialKeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA58AD030DD11E6B0C70FD968E4825C /* MaterialKeyframeAnimation.swift */; };
+		61D8AC55CA230A13D28A28E5A9981DA5 /* Material+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31D55E27D6D8D5F949D719548C21A7E /* Material+UIImage.swift */; };
+		62323DBCAAA85F28765962FEC01AA944 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3485F9FDFAA022F089C679FE59750AB /* Text.swift */; };
+		6330CA0301F6A104CCC80F280E3A530E /* MaterialCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3F2C15F084EA981EA15E00F026A95 /* MaterialCollectionViewDelegate.swift */; };
+		67420F083BA20D6AD704EF89BA32C6F6 /* Pods-FasType-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB82938CDB8F12909A659EA57526FDAF /* Pods-FasType-dummy.m */; };
+		67AC0FD4762630B14321707DFDEBA546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		68A8BB3DC3A90908BE77CAFDD02A06E6 /* Material-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E035998180AD637B0597D2C3E16BC7E3 /* Material-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68BDA350F1B2D650F0B25BB7902D71A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7692A1593D6258C88470D0132352C903 /* JTFadingInfoView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB426FD6BC9B77A619B5E6CF1D8074 /* JTFadingInfoView-dummy.m */; };
+		7E307BE02913D982E102CCD2D87E5146 /* MaterialDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4607BCD49B686B84E41FE731E44C936F /* MaterialDepth.swift */; };
+		82F446E59D5AB01A85CAD9369A606A80 /* Material+UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F9CAD340F635A08EE0858FF20C05E6 /* Material+UIImage+Resize.swift */; };
+		86FA356C8BE8D5779A554D00A298DBCB /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338B68506E41E687EFB8C2B0D2D1D244 /* SearchBarViewController.swift */; };
+		8ED5697FD5A561B4E70A0DCBC4A083B3 /* ImageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9740011683C3B16CDB0F54EB40B6D /* ImageCardView.swift */; };
+		9083EAF89942F376BB2F648317E4E32A /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27152C2280847F906A9AFF366A5ECC00 /* MaterialTableViewCell.swift */; };
+		909CA8BACF7F797BCF0739A32C5C0397 /* MaterialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE60A5CAA958B54E10CDCB332AB9CC4 /* MaterialLayout.swift */; };
+		916F2E8AA14F1EBE23540B9181E640E6 /* MaterialSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD463F11803E12977A7E8C527CFCE5F0 /* MaterialSwitch.swift */; };
+		92CEEC98DC234AB8DC785D1CD684E1DC /* MaterialCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F167BFD703456B996E01BDFDADA5AE1 /* MaterialCollectionViewLayout.swift */; };
+		94C79427FE2BAB99905E324F7F2F72D8 /* MaterialRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36F880EC7C55BA7134D755AD48C218 /* MaterialRadius.swift */; };
+		95ED541B3B188F1E97D87053C5CE854E /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A483D165B70979889F677CF7C2EC20 /* MaterialView.swift */; };
+		98006A503DBE114FC9D8F34C6CCA3115 /* RaisedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5E3C7100BA0DB589116854B5D618D5 /* RaisedButton.swift */; };
+		9AA3B741C267B4102A3ABB6A1DFD53CD /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39F5C4C1D29E7C4E3DF5CD146D460 /* FlatButton.swift */; };
+		A208068D65C2A9ED8C2AFD9C6E22F38E /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580CA01D9C5AF90E9486B355E42E961D /* TextField.swift */; };
+		A638D2F90E0459560D016C146CFB8DAB /* StatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52551D3887A912A3196E2A129EC9E606 /* StatusBarView.swift */; };
+		A84FDBDCDC65A131626C281AD146F26B /* MaterialDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344FD70D73B9A71E6960F8D36E989EC /* MaterialDevice.swift */; };
+		AA14F58A717BA0E3DA8839820914C701 /* JTFadingInfoView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE80CE3E00F9D1554D532CC77AA6597 /* JTFadingInfoView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC423A185D887ED1C68B891025D1FBDA /* JTFadingInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C43A2F1D6A68E3BA8733B5AEE45B848 /* JTFadingInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B160DFC3D99A07CBC4D81453DB449914 /* Material+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170E1D63732960A77F54E247847C5666 /* Material+String.swift */; };
+		B7C014371DAC21DB66BF34F09B510E44 /* Material+UIImage+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A59C01A9F91993AA1CA2E7F0B47EA6 /* Material+UIImage+Network.swift */; };
+		B8A77897941B61040653DC8DDE3C0FE2 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B7E5F963CB4952443BC84683A067DC /* Grid.swift */; };
+		B9F0BAD5FAAAE43361655881A4468ADA /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3118E0FE7CBDEB00CDD6D2AF85FECF /* TextView.swift */; };
+		C1503F1709994AD487BF6284ADDE1980 /* MaterialSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CDFF40D87373B23681907CD7E3B10A /* MaterialSpacing.swift */; };
+		C33FB72442942769080237385C9051BA /* SideNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385903026276CF16AD93CAFE6FEDE215 /* SideNavigationViewController.swift */; };
+		CA33C682190D246FD0972E184176859B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A93FA80458836C0408660A05ADADFF /* CardView.swift */; };
+		CDFDFACEF69C93B390A5A29BCD2303BC /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D026EF36F4712F67DD4606A1E531B4F /* SearchBarView.swift */; };
+		E391644D82FD6AFAE43A9B1051F9E19E /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429766AA54084DCBEEE84384E308088 /* CaptureView.swift */; };
+		E75C42D3822280F6AA444F66A3A784B9 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12AEBA6BDD96D37AD2E645E0758A1A6 /* NavigationBarView.swift */; };
+		EA5F74BFE07679AECA562C28ED113A0B /* MaterialTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A5D5912BC16AA2E0990CCECB9BF331 /* MaterialTextLayer.swift */; };
+		EC70AB4189691658A1A9EE080B34CBC9 /* Material+Obj-C.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A8EFEE8F11D6C154C3C01E2B8BC0C /* Material+Obj-C.swift */; };
+		F0055E2044BB382BA4C28108BD8AFA54 /* MaterialIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BCA53F475A5F2CDF3140DC173884A3 /* MaterialIcon.swift */; };
+		F200B4818444F283008F06A6DE51AAA1 /* JTFadingInfoView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BC0E2B0B513A5E7D5980A4C6978747E /* JTFadingInfoView.bundle */; };
+		F53345242A0FC676A5701FE5D3F96CA5 /* MaterialPulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34C8812BF29638F16BB607AD9872B63 /* MaterialPulseView.swift */; };
+		F6B6B2779D5C68A8354892F106F7FEA5 /* RobotoFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57546344D31B850EAEB1A7E17D8D242 /* RobotoFont.swift */; };
+		F944FA516774ED94867CC5129BCFD562 /* JTFadingInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE236F5E1352B36FF2F4264F81924C14 /* JTFadingInfoView.m */; };
+		F9F0F91A3396797F21639ED24BF79FC0 /* MaterialEdgeInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207E35705E901A2EE0003CA0922638A /* MaterialEdgeInset.swift */; };
+		F9FCBA6D9B41834C0961E68758F916D4 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A363571ADB13D04398EE8B4252A202 /* ControlView.swift */; };
+		FA60259DCE1FF8CE0443CD0C3B896095 /* MaterialColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138B955E05190F93AE9A07B75557FDAF /* MaterialColor.swift */; };
+		FD7969742F6118D79D56A64C9732962B /* MaterialGravity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0F0B273B8EF0679ACD08B5AB8B6BE /* MaterialGravity.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		663D37E453B15C63A881A8970DD48BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0818B5067B841D4462677053A647101;
+			remoteInfo = "JTFadingInfoView-JTFadingInfoView";
+		};
+		71A3FE3633FDA01ACF5971E0924CF516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D29E8C2A60D3BB04FB162A6A5817AD6;
+			remoteInfo = Material;
+		};
+		9DE5A4F37C34FB9F828DD0E253423072 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEBAEFE738269C0B332F729FAFC62820;
+			remoteInfo = JTFadingInfoView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02E1BE2B6DB56F4747E22848CF0D044A /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewCell.swift; path = Sources/MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
+		037A5AC64BA9F25A0FAD506BD8B9D4BE /* Pods-FasType-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FasType-acknowledgements.markdown"; sourceTree = "<group>"; };
+		045CF524F0656342ED7D13272CEBEB22 /* NavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Sources/NavigationController.swift; sourceTree = "<group>"; };
+		0AFB426FD6BC9B77A619B5E6CF1D8074 /* JTFadingInfoView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTFadingInfoView-dummy.m"; sourceTree = "<group>"; };
+		0BC0E2B0B513A5E7D5980A4C6978747E /* JTFadingInfoView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTFadingInfoView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C13FEA95664AC823640F1F875A89D07 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationBarViewController.swift; path = Sources/NavigationBarViewController.swift; sourceTree = "<group>"; };
+		0E5E3C7100BA0DB589116854B5D618D5 /* RaisedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisedButton.swift; path = Sources/RaisedButton.swift; sourceTree = "<group>"; };
+		11F9CAD340F635A08EE0858FF20C05E6 /* Material+UIImage+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Resize.swift"; path = "Sources/Material+UIImage+Resize.swift"; sourceTree = "<group>"; };
+		1207E35705E901A2EE0003CA0922638A /* MaterialEdgeInset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialEdgeInset.swift; path = Sources/MaterialEdgeInset.swift; sourceTree = "<group>"; };
+		138B955E05190F93AE9A07B75557FDAF /* MaterialColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialColor.swift; path = Sources/MaterialColor.swift; sourceTree = "<group>"; };
+		13CDFF40D87373B23681907CD7E3B10A /* MaterialSpacing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialSpacing.swift; path = Sources/MaterialSpacing.swift; sourceTree = "<group>"; };
+		170E1D63732960A77F54E247847C5666 /* Material+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+String.swift"; path = "Sources/Material+String.swift"; sourceTree = "<group>"; };
+		1A0F264A6B70B2832B083C6F3BD489A2 /* Material-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Material-dummy.m"; sourceTree = "<group>"; };
+		1D1CC7C812082CE74F6C7A691F3F3D00 /* MaterialPulseCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialPulseCollectionViewCell.swift; path = Sources/MaterialPulseCollectionViewCell.swift; sourceTree = "<group>"; };
+		1DE60A5CAA958B54E10CDCB332AB9CC4 /* MaterialLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialLayout.swift; path = Sources/MaterialLayout.swift; sourceTree = "<group>"; };
+		1F0A69C9E08BFB3C105530AABAA1FF7A /* MaterialAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialAnimation.swift; path = Sources/MaterialAnimation.swift; sourceTree = "<group>"; };
+		20CF8CAAC8A7DB0612FB827A61CEAC98 /* Material+UIImage+Crop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Crop.swift"; path = "Sources/Material+UIImage+Crop.swift"; sourceTree = "<group>"; };
+		22A59C01A9F91993AA1CA2E7F0B47EA6 /* Material+UIImage+Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Network.swift"; path = "Sources/Material+UIImage+Network.swift"; sourceTree = "<group>"; };
+		25A5D5912BC16AA2E0990CCECB9BF331 /* MaterialTextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialTextLayer.swift; path = Sources/MaterialTextLayer.swift; sourceTree = "<group>"; };
+		25E5182B5B016AE256F7FD8EB863BA2F /* Pods_FasType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FasType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27152C2280847F906A9AFF366A5ECC00 /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialTableViewCell.swift; path = Sources/MaterialTableViewCell.swift; sourceTree = "<group>"; };
+		28201CE140DBA5C58C52A8906302C1D5 /* Material+UIImage+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Size.swift"; path = "Sources/Material+UIImage+Size.swift"; sourceTree = "<group>"; };
+		29EAE75504289D20ABA5560CB65E8479 /* TextStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStorage.swift; path = Sources/TextStorage.swift; sourceTree = "<group>"; };
+		2E28AE77617F0C836D633B031045349F /* Pods-FasType-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FasType-frameworks.sh"; sourceTree = "<group>"; };
+		2E5EBAD4732B012A353A07437D5302BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F5EEC16999218C6F676BFB496AB780C /* Material+UIImage+Blank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Blank.swift"; path = "Sources/Material+UIImage+Blank.swift"; sourceTree = "<group>"; };
+		338B68506E41E687EFB8C2B0D2D1D244 /* SearchBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchBarViewController.swift; path = Sources/SearchBarViewController.swift; sourceTree = "<group>"; };
+		3395C837C61371218F01FAF673C65CE7 /* Material.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Material.xcconfig; sourceTree = "<group>"; };
+		3429766AA54084DCBEEE84384E308088 /* CaptureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureView.swift; path = Sources/CaptureView.swift; sourceTree = "<group>"; };
+		35BF6FB06F8B775810F9111AEC0B8D24 /* MaterialLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialLabel.swift; path = Sources/MaterialLabel.swift; sourceTree = "<group>"; };
+		385903026276CF16AD93CAFE6FEDE215 /* SideNavigationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideNavigationViewController.swift; path = Sources/SideNavigationViewController.swift; sourceTree = "<group>"; };
+		3D026EF36F4712F67DD4606A1E531B4F /* SearchBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchBarView.swift; path = Sources/SearchBarView.swift; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F167BFD703456B996E01BDFDADA5AE1 /* MaterialCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewLayout.swift; path = Sources/MaterialCollectionViewLayout.swift; sourceTree = "<group>"; };
+		41BB7588C559F02671C1D7B55CAF6AC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4607BCD49B686B84E41FE731E44C936F /* MaterialDepth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialDepth.swift; path = Sources/MaterialDepth.swift; sourceTree = "<group>"; };
+		50423B3AD300D2060D71472C87AE7E6C /* Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Sources/Menu.swift; sourceTree = "<group>"; };
+		52551D3887A912A3196E2A129EC9E606 /* StatusBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBarView.swift; path = Sources/StatusBarView.swift; sourceTree = "<group>"; };
+		57A93FA80458836C0408660A05ADADFF /* CardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = Sources/CardView.swift; sourceTree = "<group>"; };
+		580CA01D9C5AF90E9486B355E42E961D /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Sources/TextField.swift; sourceTree = "<group>"; };
+		5AE80CE3E00F9D1554D532CC77AA6597 /* JTFadingInfoView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTFadingInfoView-umbrella.h"; sourceTree = "<group>"; };
+		5AE86FCB0064946D98951F559550B6D5 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E972B332C595449DB1F583303806A2F /* NavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = Sources/NavigationBar.swift; sourceTree = "<group>"; };
+		613C76AE86566023E714FDD41BF5C40E /* MaterialBorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialBorder.swift; path = Sources/MaterialBorder.swift; sourceTree = "<group>"; };
+		67B7E5F963CB4952443BC84683A067DC /* Grid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Grid.swift; path = Sources/Grid.swift; sourceTree = "<group>"; };
+		6903B0DD5815A19EBCC785C93500CFEE /* Pods-FasType-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FasType-acknowledgements.plist"; sourceTree = "<group>"; };
+		69A363571ADB13D04398EE8B4252A202 /* ControlView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlView.swift; path = Sources/ControlView.swift; sourceTree = "<group>"; };
+		6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTFadingInfoView.xcconfig; sourceTree = "<group>"; };
+		6CCC896C9056BFCE57D5A1635091766B /* Material-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Material-prefix.pch"; sourceTree = "<group>"; };
+		6F4AD3B10D14E73BD4BE1FE65A99667C /* MaterialBasicAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialBasicAnimation.swift; path = Sources/MaterialBasicAnimation.swift; sourceTree = "<group>"; };
+		73430284351B3B471048C5F645FEE9AA /* Pods-FasType-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FasType-resources.sh"; sourceTree = "<group>"; };
+		73F71234B84A469AC6CA3615DE7596B8 /* MaterialButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialButton.swift; path = Sources/MaterialButton.swift; sourceTree = "<group>"; };
+		77595D36B937B34F751F18E323DEB9AA /* MaterialFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialFont.swift; path = Sources/MaterialFont.swift; sourceTree = "<group>"; };
+		79A7DE06220C039604C5D348F47A86B0 /* Material+UIFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIFont.swift"; path = "Sources/Material+UIFont.swift"; sourceTree = "<group>"; };
+		7C05D52FC9B6D40FB3B40DCCD061A579 /* JTFadingInfoView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTFadingInfoView.modulemap; sourceTree = "<group>"; };
+		7DF39F5C4C1D29E7C4E3DF5CD146D460 /* FlatButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlatButton.swift; path = Sources/FlatButton.swift; sourceTree = "<group>"; };
+		80BCA53F475A5F2CDF3140DC173884A3 /* MaterialIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialIcon.swift; path = Sources/MaterialIcon.swift; sourceTree = "<group>"; };
+		8344FD70D73B9A71E6960F8D36E989EC /* MaterialDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialDevice.swift; path = Sources/MaterialDevice.swift; sourceTree = "<group>"; };
+		8AB9740011683C3B16CDB0F54EB40B6D /* ImageCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCardView.swift; path = Sources/ImageCardView.swift; sourceTree = "<group>"; };
+		8AF54375DDA56FBDB883E591B94E5B64 /* MenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuView.swift; path = Sources/MenuView.swift; sourceTree = "<group>"; };
+		8CB003F8E0E09879C76974BD10B70F51 /* Material+UIImage+PhotoLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+PhotoLibrary.swift"; path = "Sources/Material+UIImage+PhotoLibrary.swift"; sourceTree = "<group>"; };
+		8E121ABE945C05817A5AAD327162E3BB /* Material+UIImage+Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage+Color.swift"; path = "Sources/Material+UIImage+Color.swift"; sourceTree = "<group>"; };
+		8E3118E0FE7CBDEB00CDD6D2AF85FECF /* TextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextView.swift; path = Sources/TextView.swift; sourceTree = "<group>"; };
+		92FA7DB456312A3FB4A445206B4D9A02 /* JTFadingInfoView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTFadingInfoView-prefix.pch"; sourceTree = "<group>"; };
+		94A483D165B70979889F677CF7C2EC20 /* MaterialView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialView.swift; path = Sources/MaterialView.swift; sourceTree = "<group>"; };
+		9C43A2F1D6A68E3BA8733B5AEE45B848 /* JTFadingInfoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTFadingInfoView.h; path = Pod/Classes/JTFadingInfoView.h; sourceTree = "<group>"; };
+		A0F504421289758B39EBA3EDED479048 /* Material.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Material.modulemap; sourceTree = "<group>"; };
+		A3485F9FDFAA022F089C679FE59750AB /* Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Sources/Text.swift; sourceTree = "<group>"; };
+		A523E3C8E4AF359AF7BC0AD9F87B38BA /* MaterialShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialShape.swift; path = Sources/MaterialShape.swift; sourceTree = "<group>"; };
+		AFA58AD030DD11E6B0C70FD968E4825C /* MaterialKeyframeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialKeyframeAnimation.swift; path = Sources/MaterialKeyframeAnimation.swift; sourceTree = "<group>"; };
+		B12AEBA6BDD96D37AD2E645E0758A1A6 /* NavigationBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationBarView.swift; path = Sources/NavigationBarView.swift; sourceTree = "<group>"; };
+		B1C759AFEF89BE7E2F12A19DE4BA244F /* MaterialLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialLayer.swift; path = Sources/MaterialLayer.swift; sourceTree = "<group>"; };
+		B34C8812BF29638F16BB607AD9872B63 /* MaterialPulseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialPulseView.swift; path = Sources/MaterialPulseView.swift; sourceTree = "<group>"; };
+		B3DCF73EAA44A3B3CE4F5FBC5E0FB1BF /* CaptureSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CaptureSession.swift; path = Sources/CaptureSession.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC89FF37D7EE45772D90F9633AB0D4DF /* Pods-FasType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FasType.modulemap"; sourceTree = "<group>"; };
+		BD463F11803E12977A7E8C527CFCE5F0 /* MaterialSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialSwitch.swift; path = Sources/MaterialSwitch.swift; sourceTree = "<group>"; };
+		C46DE7F485798FA8DEDF2C6D5E72CA94 /* CapturePreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapturePreviewView.swift; path = Sources/CapturePreviewView.swift; sourceTree = "<group>"; };
+		C77EE6BBCAE02BE73B98EB2DE2CDBD03 /* Pods-FasType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FasType-umbrella.h"; sourceTree = "<group>"; };
+		C791FE29F4557ABCE10D41950A7DE86B /* FabButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FabButton.swift; path = Sources/FabButton.swift; sourceTree = "<group>"; };
+		D699704F6286B1A077A5EA54DCC40677 /* StatusBarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBarViewController.swift; path = Sources/StatusBarViewController.swift; sourceTree = "<group>"; };
+		D8E0F0B273B8EF0679ACD08B5AB8B6BE /* MaterialGravity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialGravity.swift; path = Sources/MaterialGravity.swift; sourceTree = "<group>"; };
+		DB82938CDB8F12909A659EA57526FDAF /* Pods-FasType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FasType-dummy.m"; sourceTree = "<group>"; };
+		DEFBC2425D50A9DEE35E02F01E60BB50 /* MaterialTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialTransitionAnimation.swift; path = Sources/MaterialTransitionAnimation.swift; sourceTree = "<group>"; };
+		E035998180AD637B0597D2C3E16BC7E3 /* Material-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Material-umbrella.h"; sourceTree = "<group>"; };
+		E764A3240215B4B76FE4198CDE712A9E /* JTFadingInfoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTFadingInfoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8709DC9233B602BF7D8AD47379F79A5 /* MenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Sources/MenuViewController.swift; sourceTree = "<group>"; };
+		EDA3F2C15F084EA981EA15E00F026A95 /* MaterialCollectionViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewDelegate.swift; path = Sources/MaterialCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		EE236F5E1352B36FF2F4264F81924C14 /* JTFadingInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTFadingInfoView.m; path = Pod/Classes/JTFadingInfoView.m; sourceTree = "<group>"; };
+		EE6096515966FB1E7947629F21CD0E9A /* Pods-FasType.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FasType.debug.xcconfig"; sourceTree = "<group>"; };
+		EF36F880EC7C55BA7134D755AD48C218 /* MaterialRadius.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialRadius.swift; path = Sources/MaterialRadius.swift; sourceTree = "<group>"; };
+		F1FEDC30457F8F599FCDD378019A9D97 /* Pods-FasType.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FasType.release.xcconfig"; sourceTree = "<group>"; };
+		F31D55E27D6D8D5F949D719548C21A7E /* Material+UIImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+UIImage.swift"; path = "Sources/Material+UIImage.swift"; sourceTree = "<group>"; };
+		F3B7AE1C9B05A757A6C8F92D17B0A8BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D14031625DC758A73105D6D7CA76BB /* MaterialCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialCollectionView.swift; path = Sources/MaterialCollectionView.swift; sourceTree = "<group>"; };
+		F57546344D31B850EAEB1A7E17D8D242 /* RobotoFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RobotoFont.swift; path = Sources/RobotoFont.swift; sourceTree = "<group>"; };
+		F62A106A62F4128D6A2FA5B91378C0A8 /* MaterialDataSourceItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialDataSourceItem.swift; path = Sources/MaterialDataSourceItem.swift; sourceTree = "<group>"; };
+		FC0A8EFEE8F11D6C154C3C01E2B8BC0C /* Material+Obj-C.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Material+Obj-C.swift"; path = "Sources/Material+Obj-C.swift"; sourceTree = "<group>"; };
+		FD9F6B71A5FE31F76B2EB20682E81786 /* MaterialCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialCollectionViewDataSource.swift; path = Sources/MaterialCollectionViewDataSource.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E09A79B32E5E588246771688C74A593 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BDA350F1B2D650F0B25BB7902D71A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AF99D7603C70AF10FD6D22479891BC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67AC0FD4762630B14321707DFDEBA546 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3685D0E21C45EDAD5B12924FFDD3D68A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F25F6ED4B280CBBEF26CF3D2C001B642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29077184BAC1AC97360A929FC9BFDA7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16ADD67D6FC0F876C8C590C99EDEA6AD /* Pods-FasType */ = {
+			isa = PBXGroup;
+			children = (
+				F3B7AE1C9B05A757A6C8F92D17B0A8BA /* Info.plist */,
+				BC89FF37D7EE45772D90F9633AB0D4DF /* Pods-FasType.modulemap */,
+				037A5AC64BA9F25A0FAD506BD8B9D4BE /* Pods-FasType-acknowledgements.markdown */,
+				6903B0DD5815A19EBCC785C93500CFEE /* Pods-FasType-acknowledgements.plist */,
+				DB82938CDB8F12909A659EA57526FDAF /* Pods-FasType-dummy.m */,
+				2E28AE77617F0C836D633B031045349F /* Pods-FasType-frameworks.sh */,
+				73430284351B3B471048C5F645FEE9AA /* Pods-FasType-resources.sh */,
+				C77EE6BBCAE02BE73B98EB2DE2CDBD03 /* Pods-FasType-umbrella.h */,
+				EE6096515966FB1E7947629F21CD0E9A /* Pods-FasType.debug.xcconfig */,
+				F1FEDC30457F8F599FCDD378019A9D97 /* Pods-FasType.release.xcconfig */,
+			);
+			name = "Pods-FasType";
+			path = "Target Support Files/Pods-FasType";
+			sourceTree = "<group>";
+		};
+		2D2014232EC5DB4652D01FE37B13F211 /* JTFadingInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				9C43A2F1D6A68E3BA8733B5AEE45B848 /* JTFadingInfoView.h */,
+				EE236F5E1352B36FF2F4264F81924C14 /* JTFadingInfoView.m */,
+				6F08EA8A6FC776B030AD80053E8289E9 /* Support Files */,
+			);
+			path = JTFadingInfoView;
+			sourceTree = "<group>";
+		};
+		37BA987E026ACAE309396C7FED48BD54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D2014232EC5DB4652D01FE37B13F211 /* JTFadingInfoView */,
+				E0025260F0C0D6BCCCF1247C1FD1F112 /* Material */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4498A9005BBD6BC0B0EA870FE822898E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16ADD67D6FC0F876C8C590C99EDEA6AD /* Pods-FasType */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6F08EA8A6FC776B030AD80053E8289E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E5EBAD4732B012A353A07437D5302BB /* Info.plist */,
+				7C05D52FC9B6D40FB3B40DCCD061A579 /* JTFadingInfoView.modulemap */,
+				6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */,
+				0AFB426FD6BC9B77A619B5E6CF1D8074 /* JTFadingInfoView-dummy.m */,
+				92FA7DB456312A3FB4A445206B4D9A02 /* JTFadingInfoView-prefix.pch */,
+				5AE80CE3E00F9D1554D532CC77AA6597 /* JTFadingInfoView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JTFadingInfoView";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				37BA987E026ACAE309396C7FED48BD54 /* Pods */,
+				DDD36F4E9BE9BB466F77B8A0F2734A10 /* Products */,
+				4498A9005BBD6BC0B0EA870FE822898E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ADB80A35AE2674AEF9265F9C67F7F178 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41BB7588C559F02671C1D7B55CAF6AC2 /* Info.plist */,
+				A0F504421289758B39EBA3EDED479048 /* Material.modulemap */,
+				3395C837C61371218F01FAF673C65CE7 /* Material.xcconfig */,
+				1A0F264A6B70B2832B083C6F3BD489A2 /* Material-dummy.m */,
+				6CCC896C9056BFCE57D5A1635091766B /* Material-prefix.pch */,
+				E035998180AD637B0597D2C3E16BC7E3 /* Material-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Material";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DDD36F4E9BE9BB466F77B8A0F2734A10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BC0E2B0B513A5E7D5980A4C6978747E /* JTFadingInfoView.bundle */,
+				E764A3240215B4B76FE4198CDE712A9E /* JTFadingInfoView.framework */,
+				5AE86FCB0064946D98951F559550B6D5 /* Material.framework */,
+				25E5182B5B016AE256F7FD8EB863BA2F /* Pods_FasType.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0025260F0C0D6BCCCF1247C1FD1F112 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				C46DE7F485798FA8DEDF2C6D5E72CA94 /* CapturePreviewView.swift */,
+				B3DCF73EAA44A3B3CE4F5FBC5E0FB1BF /* CaptureSession.swift */,
+				3429766AA54084DCBEEE84384E308088 /* CaptureView.swift */,
+				57A93FA80458836C0408660A05ADADFF /* CardView.swift */,
+				69A363571ADB13D04398EE8B4252A202 /* ControlView.swift */,
+				C791FE29F4557ABCE10D41950A7DE86B /* FabButton.swift */,
+				7DF39F5C4C1D29E7C4E3DF5CD146D460 /* FlatButton.swift */,
+				67B7E5F963CB4952443BC84683A067DC /* Grid.swift */,
+				8AB9740011683C3B16CDB0F54EB40B6D /* ImageCardView.swift */,
+				FC0A8EFEE8F11D6C154C3C01E2B8BC0C /* Material+Obj-C.swift */,
+				170E1D63732960A77F54E247847C5666 /* Material+String.swift */,
+				79A7DE06220C039604C5D348F47A86B0 /* Material+UIFont.swift */,
+				F31D55E27D6D8D5F949D719548C21A7E /* Material+UIImage.swift */,
+				2F5EEC16999218C6F676BFB496AB780C /* Material+UIImage+Blank.swift */,
+				8E121ABE945C05817A5AAD327162E3BB /* Material+UIImage+Color.swift */,
+				20CF8CAAC8A7DB0612FB827A61CEAC98 /* Material+UIImage+Crop.swift */,
+				22A59C01A9F91993AA1CA2E7F0B47EA6 /* Material+UIImage+Network.swift */,
+				8CB003F8E0E09879C76974BD10B70F51 /* Material+UIImage+PhotoLibrary.swift */,
+				11F9CAD340F635A08EE0858FF20C05E6 /* Material+UIImage+Resize.swift */,
+				28201CE140DBA5C58C52A8906302C1D5 /* Material+UIImage+Size.swift */,
+				1F0A69C9E08BFB3C105530AABAA1FF7A /* MaterialAnimation.swift */,
+				6F4AD3B10D14E73BD4BE1FE65A99667C /* MaterialBasicAnimation.swift */,
+				613C76AE86566023E714FDD41BF5C40E /* MaterialBorder.swift */,
+				73F71234B84A469AC6CA3615DE7596B8 /* MaterialButton.swift */,
+				F3D14031625DC758A73105D6D7CA76BB /* MaterialCollectionView.swift */,
+				02E1BE2B6DB56F4747E22848CF0D044A /* MaterialCollectionViewCell.swift */,
+				FD9F6B71A5FE31F76B2EB20682E81786 /* MaterialCollectionViewDataSource.swift */,
+				EDA3F2C15F084EA981EA15E00F026A95 /* MaterialCollectionViewDelegate.swift */,
+				3F167BFD703456B996E01BDFDADA5AE1 /* MaterialCollectionViewLayout.swift */,
+				138B955E05190F93AE9A07B75557FDAF /* MaterialColor.swift */,
+				F62A106A62F4128D6A2FA5B91378C0A8 /* MaterialDataSourceItem.swift */,
+				4607BCD49B686B84E41FE731E44C936F /* MaterialDepth.swift */,
+				8344FD70D73B9A71E6960F8D36E989EC /* MaterialDevice.swift */,
+				1207E35705E901A2EE0003CA0922638A /* MaterialEdgeInset.swift */,
+				77595D36B937B34F751F18E323DEB9AA /* MaterialFont.swift */,
+				D8E0F0B273B8EF0679ACD08B5AB8B6BE /* MaterialGravity.swift */,
+				80BCA53F475A5F2CDF3140DC173884A3 /* MaterialIcon.swift */,
+				AFA58AD030DD11E6B0C70FD968E4825C /* MaterialKeyframeAnimation.swift */,
+				35BF6FB06F8B775810F9111AEC0B8D24 /* MaterialLabel.swift */,
+				B1C759AFEF89BE7E2F12A19DE4BA244F /* MaterialLayer.swift */,
+				1DE60A5CAA958B54E10CDCB332AB9CC4 /* MaterialLayout.swift */,
+				1D1CC7C812082CE74F6C7A691F3F3D00 /* MaterialPulseCollectionViewCell.swift */,
+				B34C8812BF29638F16BB607AD9872B63 /* MaterialPulseView.swift */,
+				EF36F880EC7C55BA7134D755AD48C218 /* MaterialRadius.swift */,
+				A523E3C8E4AF359AF7BC0AD9F87B38BA /* MaterialShape.swift */,
+				13CDFF40D87373B23681907CD7E3B10A /* MaterialSpacing.swift */,
+				BD463F11803E12977A7E8C527CFCE5F0 /* MaterialSwitch.swift */,
+				27152C2280847F906A9AFF366A5ECC00 /* MaterialTableViewCell.swift */,
+				25A5D5912BC16AA2E0990CCECB9BF331 /* MaterialTextLayer.swift */,
+				DEFBC2425D50A9DEE35E02F01E60BB50 /* MaterialTransitionAnimation.swift */,
+				94A483D165B70979889F677CF7C2EC20 /* MaterialView.swift */,
+				50423B3AD300D2060D71472C87AE7E6C /* Menu.swift */,
+				8AF54375DDA56FBDB883E591B94E5B64 /* MenuView.swift */,
+				E8709DC9233B602BF7D8AD47379F79A5 /* MenuViewController.swift */,
+				5E972B332C595449DB1F583303806A2F /* NavigationBar.swift */,
+				B12AEBA6BDD96D37AD2E645E0758A1A6 /* NavigationBarView.swift */,
+				0C13FEA95664AC823640F1F875A89D07 /* NavigationBarViewController.swift */,
+				045CF524F0656342ED7D13272CEBEB22 /* NavigationController.swift */,
+				0E5E3C7100BA0DB589116854B5D618D5 /* RaisedButton.swift */,
+				F57546344D31B850EAEB1A7E17D8D242 /* RobotoFont.swift */,
+				3D026EF36F4712F67DD4606A1E531B4F /* SearchBarView.swift */,
+				338B68506E41E687EFB8C2B0D2D1D244 /* SearchBarViewController.swift */,
+				385903026276CF16AD93CAFE6FEDE215 /* SideNavigationViewController.swift */,
+				52551D3887A912A3196E2A129EC9E606 /* StatusBarView.swift */,
+				D699704F6286B1A077A5EA54DCC40677 /* StatusBarViewController.swift */,
+				A3485F9FDFAA022F089C679FE59750AB /* Text.swift */,
+				580CA01D9C5AF90E9486B355E42E961D /* TextField.swift */,
+				29EAE75504289D20ABA5560CB65E8479 /* TextStorage.swift */,
+				8E3118E0FE7CBDEB00CDD6D2AF85FECF /* TextView.swift */,
+				ADB80A35AE2674AEF9265F9C67F7F178 /* Support Files */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		24A52124F53E2BFDF7AE027F77137B50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA14F58A717BA0E3DA8839820914C701 /* JTFadingInfoView-umbrella.h in Headers */,
+				AC423A185D887ED1C68B891025D1FBDA /* JTFadingInfoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D2DAE4B83982106DBD32211A922BEAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A8BB3DC3A90908BE77CAFDD02A06E6 /* Material-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B8F7D2DEECF93DB11045B731E0D7A0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35ACF15E27D84BEDB4E55D4376F92E96 /* Pods-FasType-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D29E8C2A60D3BB04FB162A6A5817AD6 /* Material */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FEB789B1B5CEFFF5DBBEB4A7094640 /* Build configuration list for PBXNativeTarget "Material" */;
+			buildPhases = (
+				508FFFCE2F823DB6D1170EBD0647318C /* Sources */,
+				2AF99D7603C70AF10FD6D22479891BC0 /* Frameworks */,
+				4D2DAE4B83982106DBD32211A922BEAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Material;
+			productName = Material;
+			productReference = 5AE86FCB0064946D98951F559550B6D5 /* Material.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3FAE345EB04A7E59C7097809A8D55CB0 /* Pods-FasType */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6A57CC0E44E8C551876505FA7DE38DC /* Build configuration list for PBXNativeTarget "Pods-FasType" */;
+			buildPhases = (
+				A732671493BDA0EFBA5E2DC63C812B12 /* Sources */,
+				1E09A79B32E5E588246771688C74A593 /* Frameworks */,
+				5B8F7D2DEECF93DB11045B731E0D7A0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D13848270A7CEC825B7B0FF1F3454E /* PBXTargetDependency */,
+				7223A3D812E19F2D4923F182C1209DC4 /* PBXTargetDependency */,
+			);
+			name = "Pods-FasType";
+			productName = "Pods-FasType";
+			productReference = 25E5182B5B016AE256F7FD8EB863BA2F /* Pods_FasType.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D0818B5067B841D4462677053A647101 /* JTFadingInfoView-JTFadingInfoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E80F7D9D520A0F968BEC8702BAF8DFE /* Build configuration list for PBXNativeTarget "JTFadingInfoView-JTFadingInfoView" */;
+			buildPhases = (
+				22FD7A7768F5972B57DB15CE68B1834E /* Sources */,
+				3685D0E21C45EDAD5B12924FFDD3D68A /* Frameworks */,
+				4255034145E948365BCBCA70209FE93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JTFadingInfoView-JTFadingInfoView";
+			productName = "JTFadingInfoView-JTFadingInfoView";
+			productReference = 0BC0E2B0B513A5E7D5980A4C6978747E /* JTFadingInfoView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		DEBAEFE738269C0B332F729FAFC62820 /* JTFadingInfoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06C93868FD4982244EE02638297EB687 /* Build configuration list for PBXNativeTarget "JTFadingInfoView" */;
+			buildPhases = (
+				88AF6C6C958804E42F88BAAEB37E0042 /* Sources */,
+				F25F6ED4B280CBBEF26CF3D2C001B642 /* Frameworks */,
+				4E7674270FAA789221305AFA34E7931B /* Resources */,
+				24A52124F53E2BFDF7AE027F77137B50 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04BC9373E7DC66E62CDAB3176F82DD6D /* PBXTargetDependency */,
+			);
+			name = JTFadingInfoView;
+			productName = JTFadingInfoView;
+			productReference = E764A3240215B4B76FE4198CDE712A9E /* JTFadingInfoView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DDD36F4E9BE9BB466F77B8A0F2734A10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEBAEFE738269C0B332F729FAFC62820 /* JTFadingInfoView */,
+				D0818B5067B841D4462677053A647101 /* JTFadingInfoView-JTFadingInfoView */,
+				1D29E8C2A60D3BB04FB162A6A5817AD6 /* Material */,
+				3FAE345EB04A7E59C7097809A8D55CB0 /* Pods-FasType */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4255034145E948365BCBCA70209FE93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E7674270FAA789221305AFA34E7931B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F200B4818444F283008F06A6DE51AAA1 /* JTFadingInfoView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22FD7A7768F5972B57DB15CE68B1834E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		508FFFCE2F823DB6D1170EBD0647318C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18928F8C7B6436EF7561B38F39356774 /* CapturePreviewView.swift in Sources */,
+				141F98E84B6BAAF789F458744C32491E /* CaptureSession.swift in Sources */,
+				E391644D82FD6AFAE43A9B1051F9E19E /* CaptureView.swift in Sources */,
+				CA33C682190D246FD0972E184176859B /* CardView.swift in Sources */,
+				F9FCBA6D9B41834C0961E68758F916D4 /* ControlView.swift in Sources */,
+				09C82839354603A46715889A1A478152 /* FabButton.swift in Sources */,
+				9AA3B741C267B4102A3ABB6A1DFD53CD /* FlatButton.swift in Sources */,
+				B8A77897941B61040653DC8DDE3C0FE2 /* Grid.swift in Sources */,
+				8ED5697FD5A561B4E70A0DCBC4A083B3 /* ImageCardView.swift in Sources */,
+				EC70AB4189691658A1A9EE080B34CBC9 /* Material+Obj-C.swift in Sources */,
+				B160DFC3D99A07CBC4D81453DB449914 /* Material+String.swift in Sources */,
+				48D9D7A9C3C4A472CF75044B793C90DC /* Material+UIFont.swift in Sources */,
+				1F95E4E11EE9C69E0B8FABA9F46F017E /* Material+UIImage+Blank.swift in Sources */,
+				20A5958F2B94D6DE18B898ABF90558E2 /* Material+UIImage+Color.swift in Sources */,
+				31A1BB80CE5181F096C2D7FA9F160470 /* Material+UIImage+Crop.swift in Sources */,
+				B7C014371DAC21DB66BF34F09B510E44 /* Material+UIImage+Network.swift in Sources */,
+				141732172A32A45D318CE1BD592F1DF5 /* Material+UIImage+PhotoLibrary.swift in Sources */,
+				82F446E59D5AB01A85CAD9369A606A80 /* Material+UIImage+Resize.swift in Sources */,
+				0DDD1FB609C947D9E94DB15B754EAE79 /* Material+UIImage+Size.swift in Sources */,
+				61D8AC55CA230A13D28A28E5A9981DA5 /* Material+UIImage.swift in Sources */,
+				5640BC42AF157E5D6EB51E7EAC59789D /* Material-dummy.m in Sources */,
+				4E4E7B49F9763378C80FF5DE1BE7AC5E /* MaterialAnimation.swift in Sources */,
+				4C0F443171592949160E2B718E598805 /* MaterialBasicAnimation.swift in Sources */,
+				57C503D37014357010AA8D3D04EE133E /* MaterialBorder.swift in Sources */,
+				288835CFF80ADE0010A4E1436D772230 /* MaterialButton.swift in Sources */,
+				2052D8E483B84C043565829345A05C35 /* MaterialCollectionView.swift in Sources */,
+				3912236D63F8ED0D146D5620EBE8F04F /* MaterialCollectionViewCell.swift in Sources */,
+				5105168534F5E1F3E2FBF1F9403D4985 /* MaterialCollectionViewDataSource.swift in Sources */,
+				6330CA0301F6A104CCC80F280E3A530E /* MaterialCollectionViewDelegate.swift in Sources */,
+				92CEEC98DC234AB8DC785D1CD684E1DC /* MaterialCollectionViewLayout.swift in Sources */,
+				FA60259DCE1FF8CE0443CD0C3B896095 /* MaterialColor.swift in Sources */,
+				589F90FD2D61469B4862F331CE0A9C52 /* MaterialDataSourceItem.swift in Sources */,
+				7E307BE02913D982E102CCD2D87E5146 /* MaterialDepth.swift in Sources */,
+				A84FDBDCDC65A131626C281AD146F26B /* MaterialDevice.swift in Sources */,
+				F9F0F91A3396797F21639ED24BF79FC0 /* MaterialEdgeInset.swift in Sources */,
+				434E57E3E1F13E54FD8BA4ADF615C7F0 /* MaterialFont.swift in Sources */,
+				FD7969742F6118D79D56A64C9732962B /* MaterialGravity.swift in Sources */,
+				F0055E2044BB382BA4C28108BD8AFA54 /* MaterialIcon.swift in Sources */,
+				60485CFD4EEF7EF79762C11C9FCA94F2 /* MaterialKeyframeAnimation.swift in Sources */,
+				5712A85595BABB1875CCB085B727ECE8 /* MaterialLabel.swift in Sources */,
+				29043037B7733D59876B3CFA6AF64828 /* MaterialLayer.swift in Sources */,
+				909CA8BACF7F797BCF0739A32C5C0397 /* MaterialLayout.swift in Sources */,
+				16F77D0E7CF1D6A7471F4DF2BC936834 /* MaterialPulseCollectionViewCell.swift in Sources */,
+				F53345242A0FC676A5701FE5D3F96CA5 /* MaterialPulseView.swift in Sources */,
+				94C79427FE2BAB99905E324F7F2F72D8 /* MaterialRadius.swift in Sources */,
+				58AE7957DF2483B3BA166D094BB97C7A /* MaterialShape.swift in Sources */,
+				C1503F1709994AD487BF6284ADDE1980 /* MaterialSpacing.swift in Sources */,
+				916F2E8AA14F1EBE23540B9181E640E6 /* MaterialSwitch.swift in Sources */,
+				9083EAF89942F376BB2F648317E4E32A /* MaterialTableViewCell.swift in Sources */,
+				EA5F74BFE07679AECA562C28ED113A0B /* MaterialTextLayer.swift in Sources */,
+				1EBE51236C1D219BF2EFE44F968ED877 /* MaterialTransitionAnimation.swift in Sources */,
+				95ED541B3B188F1E97D87053C5CE854E /* MaterialView.swift in Sources */,
+				40E13501D6B82470BAF7378157AE4079 /* Menu.swift in Sources */,
+				036D6070F1C809A1BC6738C52C827D34 /* MenuView.swift in Sources */,
+				27520904753EDA6C0CE81C3D46C9C37F /* MenuViewController.swift in Sources */,
+				5948F868B00843D9BE2915F98A5BB734 /* NavigationBar.swift in Sources */,
+				E75C42D3822280F6AA444F66A3A784B9 /* NavigationBarView.swift in Sources */,
+				3E1CA57169BA2488AB43D07A2B30F152 /* NavigationBarViewController.swift in Sources */,
+				3DDB25D6357DB92F5A34B7D9E8F1667C /* NavigationController.swift in Sources */,
+				98006A503DBE114FC9D8F34C6CCA3115 /* RaisedButton.swift in Sources */,
+				F6B6B2779D5C68A8354892F106F7FEA5 /* RobotoFont.swift in Sources */,
+				CDFDFACEF69C93B390A5A29BCD2303BC /* SearchBarView.swift in Sources */,
+				86FA356C8BE8D5779A554D00A298DBCB /* SearchBarViewController.swift in Sources */,
+				C33FB72442942769080237385C9051BA /* SideNavigationViewController.swift in Sources */,
+				A638D2F90E0459560D016C146CFB8DAB /* StatusBarView.swift in Sources */,
+				507A88A594FDF11FA402EEFE7A5724F4 /* StatusBarViewController.swift in Sources */,
+				62323DBCAAA85F28765962FEC01AA944 /* Text.swift in Sources */,
+				A208068D65C2A9ED8C2AFD9C6E22F38E /* TextField.swift in Sources */,
+				20F992CC069BD47F212CBBC0C497B0FC /* TextStorage.swift in Sources */,
+				B9F0BAD5FAAAE43361655881A4468ADA /* TextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AF6C6C958804E42F88BAAEB37E0042 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7692A1593D6258C88470D0132352C903 /* JTFadingInfoView-dummy.m in Sources */,
+				F944FA516774ED94867CC5129BCFD562 /* JTFadingInfoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A732671493BDA0EFBA5E2DC63C812B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67420F083BA20D6AD704EF89BA32C6F6 /* Pods-FasType-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04BC9373E7DC66E62CDAB3176F82DD6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "JTFadingInfoView-JTFadingInfoView";
+			target = D0818B5067B841D4462677053A647101 /* JTFadingInfoView-JTFadingInfoView */;
+			targetProxy = 663D37E453B15C63A881A8970DD48BA6 /* PBXContainerItemProxy */;
+		};
+		7223A3D812E19F2D4923F182C1209DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Material;
+			target = 1D29E8C2A60D3BB04FB162A6A5817AD6 /* Material */;
+			targetProxy = 71A3FE3633FDA01ACF5971E0924CF516 /* PBXContainerItemProxy */;
+		};
+		D7D13848270A7CEC825B7B0FF1F3454E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JTFadingInfoView;
+			target = DEBAEFE738269C0B332F729FAFC62820 /* JTFadingInfoView */;
+			targetProxy = 9DE5A4F37C34FB9F828DD0E253423072 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2559A4A6E601FF40E85BDB52851CA3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JTFadingInfoView/JTFadingInfoView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTFadingInfoView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JTFadingInfoView/JTFadingInfoView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JTFadingInfoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		263FB5DBF83F5D07BF68AB8316E96343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3395C837C61371218F01FAF673C65CE7 /* Material.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Material/Material-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Material/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Material/Material.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Material;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		62256FCA049255B90CD26F8CE2D903CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JTFadingInfoView/JTFadingInfoView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTFadingInfoView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JTFadingInfoView/JTFadingInfoView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JTFadingInfoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71CCAFE9A9233207D4B2087334945098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JTFadingInfoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BB0FDA4553B9EF8DB28EBA88B6B504BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FEDC30457F8F599FCDD378019A9D97 /* Pods-FasType.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FasType/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FasType/Pods-FasType.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FasType;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D37CDC681C9AE58AC8D8A1E4D9D908EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A93960D0B36B71281484215CA930F72 /* JTFadingInfoView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = JTFadingInfoView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAF6E8BC7C2BEF8944F4A132B0564AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3395C837C61371218F01FAF673C65CE7 /* Material.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Material/Material-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Material/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Material/Material.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Material;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F71D52ED3EE5DEFE82A15A929B852AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6096515966FB1E7947629F21CD0E9A /* Pods-FasType.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FasType/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FasType/Pods-FasType.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FasType;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06C93868FD4982244EE02638297EB687 /* Build configuration list for PBXNativeTarget "JTFadingInfoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62256FCA049255B90CD26F8CE2D903CF /* Debug */,
+				2559A4A6E601FF40E85BDB52851CA3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
+				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FEB789B1B5CEFFF5DBBEB4A7094640 /* Build configuration list for PBXNativeTarget "Material" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263FB5DBF83F5D07BF68AB8316E96343 /* Debug */,
+				EAF6E8BC7C2BEF8944F4A132B0564AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E80F7D9D520A0F968BEC8702BAF8DFE /* Build configuration list for PBXNativeTarget "JTFadingInfoView-JTFadingInfoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37CDC681C9AE58AC8D8A1E4D9D908EF /* Debug */,
+				71CCAFE9A9233207D4B2087334945098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6A57CC0E44E8C551876505FA7DE38DC /* Build configuration list for PBXNativeTarget "Pods-FasType" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71D52ED3EE5DEFE82A15A929B852AC4 /* Debug */,
+				BB0FDA4553B9EF8DB28EBA88B6B504BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

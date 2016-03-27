@@ -1,0 +1,6 @@
+framework module JTFadingInfoView {
+  umbrella header "JTFadingInfoView-umbrella.h"
+
+  export *
+  module * { export * }
+}
