@@ -17,7 +17,7 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
     var appDelegate:AppDelegate!
     
     
-    @IBOutlet weak var PlayNow: FlatButton!
+    @IBOutlet weak var PlayNow: FabButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,11 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
         appDelegate.mpcHandler.setupSession()
         appDelegate.mpcHandler.advertiseSelf(true)
         
-        PlayNow.setTitle("NewPlay", forState: .Normal)
-        PlayNow.titleLabel!.font = RobotoFont.mediumWithSize(32)
-        PlayNow.setTitleColor(UIColor.greenColor(), forState: .Normal)
+//        PlayNow.setTitle("NewPlay", forState: .Normal)
+//        PlayNow.titleLabel!.font = RobotoFont.mediumWithSize(32)
+//        PlayNow.setTitleColor(UIColor.greenColor(), forState: .Normal)
         
-        PlayNow.backgroundColor = MaterialColor.indigo.darken1
-        
-        view.backgroundColor = MaterialColor.lightBlue.base
+//        PlayNow.backgroundColor = MaterialColor.indigo.darken1
         
 //        let PlayNow: FlatButton = FlatButton(frame: CGRectMake(107, 107, 200, 65))
 //        PlayNow.setTitle("Flat", forState: .Normal)

@@ -45,7 +45,9 @@ public struct MaterialDevice {
 		
 		let machineMirror: Mirror = Mirror(reflecting: systemInfo.machine)
 		let identifier: String = machineMirror.children.reduce("") { (identifier, element) in
-			guard let value = element.value as? Int8 where value != 0 else { return identifier }
+			guard let value = element.value as? Int8 where value != 0 else {
+				return identifier
+			}
 			return identifier + String(UnicodeScalar(UInt8(value)))
 		}
 		
@@ -96,6 +98,31 @@ public struct MaterialDevice {
 		return UIApplication.sharedApplication().statusBarOrientation.isLandscape
 	}
 	
+	/// The current UIInterfaceOrientation value.
+	public static var orientation: UIInterfaceOrientation {
+		return UIApplication.sharedApplication().statusBarOrientation
+	}
+	
+	/// Retrieves the device status bar style.
+	public static var statusBarStyle: UIStatusBarStyle {
+		get {
+		return UIApplication.sharedApplication().statusBarStyle
+		}
+		set(value) {
+			UIApplication.sharedApplication().statusBarStyle = value
+		}
+	}
+	
+	/// Retrieves the device status bar hidden state.
+	public static var statusBarHidden: Bool {
+		get {
+		return UIApplication.sharedApplication().statusBarHidden
+		}
+		set(value) {
+			UIApplication.sharedApplication().statusBarHidden = value
+		}
+	}
+	
 	/// Retrieves the device bounds.
 	public static var bounds: CGRect {
 		return UIScreen.mainScreen().bounds
@@ -114,25 +141,5 @@ public struct MaterialDevice {
 	/// Retrieves the device scale.
 	public static var scale: CGFloat {
 		return UIScreen.mainScreen().scale
-	}
-	
-	/// Retrieves the device status bar style.
-	public static var statusBarStyle: UIStatusBarStyle {
-		get {
-			return UIApplication.sharedApplication().statusBarStyle
-		}
-		set(value) {
-			UIApplication.sharedApplication().statusBarStyle = value
-		}
-	}
-	
-	/// Retrieves the device status bar hidden state.
-	public static var statusBarHidden: Bool {
-		get {
-			return UIApplication.sharedApplication().statusBarHidden
-		}
-		set(value) {
-			UIApplication.sharedApplication().statusBarHidden = value
-		}
 	}
 }

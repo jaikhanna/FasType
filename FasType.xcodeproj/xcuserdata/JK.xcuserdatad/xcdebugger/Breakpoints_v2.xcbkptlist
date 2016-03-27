@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FasType/InstructionsViewController.swift"
-            timestampString = "478555945.594587"
+            timestampString = "480750635.949629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "InstructionsViewController"
             landmarkType = "3">
          </BreakpointContent>

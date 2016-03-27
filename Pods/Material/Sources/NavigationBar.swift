@@ -42,7 +42,14 @@ public extension UINavigationBar {
 	}
 }
 
+@IBDesignable
 public class NavigationBar : UINavigationBar {
+	/// Left spacer moves the items to the left edge of the NavigationBar.
+	private var leftSpacer: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+	
+	/// Right spacer moves the items to the right edge of the NavigationBar.
+	private var rightSpacer: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+	
 	/// Reference to the backButton.
 	public private(set) lazy var backButton: FlatButton = FlatButton()
 	
@@ -50,11 +57,16 @@ public class NavigationBar : UINavigationBar {
 	The back button image writes to the backIndicatorImage property and
 	backIndicatorTransitionMaskImage property.
 	*/
-	public var backButtonImage: UIImage? {
-		didSet {
-			if nil == backButtonImage {
-				backButtonImage = MaterialIcon.arrowBack
-			}
+	@IBInspectable public var backButtonImage: UIImage? {
+		get {
+			return backIndicatorImage
+		}
+		set(value) {
+			let image: UIImage? = nil == value ? MaterialIcon.arrowBack : value
+			backIndicatorImage = image
+			backIndicatorTransitionMaskImage = image
+			backButton.setImage(image, forState: .Normal)
+			backButton.setImage(image, forState: .Highlighted)
 		}
 	}
 	
@@ -78,7 +90,7 @@ public class NavigationBar : UINavigationBar {
 	the image property, then this value does not need to be set, since the
 	visualLayer's maskToBounds is set to true by default.
 	*/
-	public var masksToBounds: Bool {
+	@IBInspectable public var masksToBounds: Bool {
 		get {
 			return layer.masksToBounds
 		}
@@ -88,14 +100,14 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the backing layer's backgroundColor.
-	public override var backgroundColor: UIColor? {
+	@IBInspectable public override var backgroundColor: UIColor? {
 		didSet {
 			barTintColor = backgroundColor
 		}
 	}
 	
 	/// A property that accesses the layer.frame.origin.x property.
-	public var x: CGFloat {
+	@IBInspectable public var x: CGFloat {
 		get {
 			return layer.frame.origin.x
 		}
@@ -105,7 +117,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the layer.frame.origin.y property.
-	public var y: CGFloat {
+	@IBInspectable public var y: CGFloat {
 		get {
 			return layer.frame.origin.y
 		}
@@ -120,7 +132,7 @@ public class NavigationBar : UINavigationBar {
 	value that is not .None, the height will be adjusted to maintain the correct
 	shape.
 	*/
-	public var width: CGFloat {
+	@IBInspectable public var width: CGFloat {
 		get {
 			return layer.frame.size.width
 		}
@@ -135,7 +147,7 @@ public class NavigationBar : UINavigationBar {
 	value that is not .None, the width will be adjusted to maintain the correct
 	shape.
 	*/
-	public var height: CGFloat {
+	@IBInspectable public var height: CGFloat {
 		get {
 			return layer.frame.size.height
 		}
@@ -145,7 +157,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the backing layer's shadowColor.
-	public var shadowColor: UIColor? {
+	@IBInspectable public var shadowColor: UIColor? {
 		didSet {
 			layer.shadowColor = shadowColor?.CGColor
 		}
@@ -162,7 +174,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the backing layer's shadowOpacity.
-	public var shadowOpacity: Float {
+	@IBInspectable public var shadowOpacity: Float {
 		get {
 			return layer.shadowOpacity
 		}
@@ -172,7 +184,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the backing layer's shadowRadius.
-	public var shadowRadius: CGFloat {
+	@IBInspectable public var shadowRadius: CGFloat {
 		get {
 			return layer.shadowRadius
 		}
@@ -203,7 +215,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the layer.borderWith.
-	public var borderWidth: CGFloat {
+	@IBInspectable public var borderWidth: CGFloat {
 		get {
 			return layer.borderWidth
 		}
@@ -213,7 +225,7 @@ public class NavigationBar : UINavigationBar {
 	}
 	
 	/// A property that accesses the layer.borderColor property.
-	public var borderColor: UIColor? {
+	@IBInspectable public var borderColor: UIColor? {
 		get {
 			return nil == layer.borderColor ? nil : UIColor(CGColor: layer.borderColor!)
 		}
@@ -249,12 +261,13 @@ public class NavigationBar : UINavigationBar {
 	
 	public override func layoutSubviews() {
 		super.layoutSubviews()
-		
-		if let item: UINavigationItem = topItem {
-			layoutNavigationItem(item)
+		if let v: UINavigationItem = topItem {
+			sizeNavigationItem(v)
 		}
 		
-		topItem?.titleView?.grid.reloadLayout()
+		if let v: UINavigationItem = backItem {
+			sizeNavigationItem(v)
+		}
 	}
 	
 	public override func pushNavigationItem(item: UINavigationItem, animated: Bool) {
@@ -266,91 +279,113 @@ public class NavigationBar : UINavigationBar {
 	Lays out the UINavigationItem.
 	- Parameter item: A UINavigationItem to layout.
 	*/
-	public func layoutNavigationItem(item: UINavigationItem) {
+	internal func layoutNavigationItem(item: UINavigationItem) {
 		prepareItem(item)
-		
-		let h: CGFloat = intrinsicContentSize().height
-		let w: CGFloat = backButton.intrinsicContentSize().width
-		let inset: CGFloat = MaterialDevice.landscape ? item.landscapeInset : item.portraitInset
 		
 		// leftControls
 		if let v: Array<UIControl> = item.leftControls {
 			var n: Array<UIBarButtonItem> = Array<UIBarButtonItem>()
 			for c in v {
-				if let b: UIButton = c as? UIButton {
-					b.contentEdgeInsets.top = 0
-					b.contentEdgeInsets.bottom = 0
-				}
-				c.bounds.size = c is MaterialSwitch ? CGSizeMake(w, h - contentInset.top - contentInset.bottom) : CGSizeMake(c.intrinsicContentSize().width, h - contentInset.top - contentInset.bottom)
 				n.append(UIBarButtonItem(customView: c))
 			}
-			
-			// The spacer moves the UIBarButtonItems to the edge of the UINavigationBar.
-			let spacer: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
-			spacer.width = inset + contentInset.left
-			n.append(spacer)
-			
+			n.append(leftSpacer)
 			item.leftBarButtonItems = n.reverse()
 		}
 		
-		if nil == item.titleView {
-			item.titleView = UIView()
-			item.titleView!.backgroundColor = nil
-			item.titleView!.grid.axis.direction = .Vertical
-		}
-		
-		item.titleView!.frame = CGRectMake(0, contentInset.top, MaterialDevice.width < MaterialDevice.height ? MaterialDevice.height : MaterialDevice.width, h - contentInset.top - contentInset.bottom)
-		item.titleView!.grid.views = []
-		
-		// TitleView alignment.
-		if let t: UILabel = item.titleLabel {
-			t.grid.rows = 1
-			
-			item.titleView!.addSubview(t)
-			item.titleView!.grid.views?.append(t)
-			
-			if 32 >= height || nil == item.detailLabel {
-				t.font = t.font?.fontWithSize(20)
-				item.titleView!.grid.axis.rows = 1
-				item.detailLabel?.hidden = true
-			} else if let d: UILabel = item.detailLabel {
-				d.grid.rows = 1
-				d.hidden = false
-				d.font = d.font.fontWithSize(12)
-				t.font = t.font.fontWithSize(17)
-				item.titleView!.addSubview(d)
-				item.titleView!.grid.axis.rows = 2
-				item.titleView!.grid.views?.append(d)
+		// Set the titleView if title is empty.
+		if "" == item.title {
+			if nil == item.titleView {
+				item.titleView = UIView(frame: CGRectMake(0, contentInset.top, MaterialDevice.width < MaterialDevice.height ? MaterialDevice.height : MaterialDevice.width, intrinsicContentSize().height - contentInset.top - contentInset.bottom))
+				item.titleView!.autoresizingMask = [.FlexibleWidth]
+				item.titleView!.grid.axis.direction = .Vertical
 			}
-		} else if let d: UIView = item.detailView {
-			d.grid.rows = 1
 			
-			item.titleView!.addSubview(d)
-			item.titleView!.grid.axis.rows = 1
-			item.titleView!.grid.views?.append(d)
+			// TitleView alignment.
+			if let t: UILabel = item.titleLabel {
+				t.grid.rows = 1
+				item.titleView!.addSubview(t)
+				
+				if let d: UILabel = item.detailLabel {
+					d.grid.rows = 1
+					item.titleView!.addSubview(d)
+					item.titleView!.grid.views = [t, d]
+				} else {
+					item.titleView!.grid.views = [t]
+				}
+			} else if let d: UIView = item.detailView {
+				d.grid.rows = 1
+				item.titleView!.addSubview(d)
+				item.titleView!.grid.views = [d]
+			}
 		}
 		
 		// rightControls
 		if let v: Array<UIControl> = item.rightControls {
 			var n: Array<UIBarButtonItem> = Array<UIBarButtonItem>()
 			for c in v {
+				n.append(UIBarButtonItem(customView: c))
+			}
+			
+			n.append(rightSpacer)
+			item.rightBarButtonItems = n.reverse()
+		}
+		
+		sizeNavigationItem(item)
+	}
+	
+	/**
+	Sizes the UINavigationItem.
+	- Parameter item: A UINavigationItem to size.
+	*/
+	internal func sizeNavigationItem(item: UINavigationItem) {
+		let h: CGFloat = intrinsicContentSize().height
+		let w: CGFloat = backButton.intrinsicContentSize().width
+		let inset: CGFloat = MaterialDevice.landscape ? item.landscapeInset : item.portraitInset
+		
+		// leftControls
+		if let v: Array<UIControl> = item.leftControls {
+			for c in v {
 				if let b: UIButton = c as? UIButton {
 					b.contentEdgeInsets.top = 0
 					b.contentEdgeInsets.bottom = 0
 				}
 				c.bounds.size = c is MaterialSwitch ? CGSizeMake(w, h - contentInset.top - contentInset.bottom) : CGSizeMake(c.intrinsicContentSize().width, h - contentInset.top - contentInset.bottom)
-				n.append(UIBarButtonItem(customView: c))
 			}
-			
-			// The spacer moves the UIBarButtonItems to the edge of the UINavigationBar.
-			let spacer: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
-			spacer.width = inset + contentInset.right
-			n.append(spacer)
-			
-			item.rightBarButtonItems = n.reverse()
+			leftSpacer.width = inset + contentInset.left
 		}
 		
-		item.titleView!.grid.reloadLayout()
+		item.titleView?.frame.size.width = width
+		item.titleView?.frame.size.height = height - contentInset.top - contentInset.bottom
+		
+		if let t: UILabel = item.titleLabel {
+			if 32 >= height || nil == item.detailLabel {
+				t.font = t.font.fontWithSize(20)
+				
+				item.detailLabel?.hidden = true
+				item.titleView?.grid.axis.rows = 1
+			} else if let d: UILabel = item.detailLabel {
+				t.font = t.font.fontWithSize(17)
+				
+				d.hidden = false
+				d.font = d.font.fontWithSize(12)
+				
+				item.titleView?.grid.axis.rows = 2
+			}
+		} else if let _: UIView = item.detailView {
+			item.titleView?.grid.axis.rows = 1
+		}
+		
+		// rightControls
+		if let v: Array<UIControl> = item.rightControls {
+			for c in v {
+				if let b: UIButton = c as? UIButton {
+					b.contentEdgeInsets.top = 0
+					b.contentEdgeInsets.bottom = 0
+				}
+				c.bounds.size = c is MaterialSwitch ? CGSizeMake(w, h - contentInset.top - contentInset.bottom) : CGSizeMake(c.intrinsicContentSize().width, h - contentInset.top - contentInset.bottom)
+			}
+			rightSpacer.width = inset + contentInset.right
+		}
 	}
 	
 	/**
@@ -380,115 +415,8 @@ public class NavigationBar : UINavigationBar {
 	
 	/// Prepares the UINavigationItem for layout and sizing.
 	internal func prepareItem(item: UINavigationItem) {
-		item.title = ""
-	}
-}
-
-/// A memory reference to the NavigationItem instance for UINavigationBar extensions.
-private var NavigationItemKey: UInt8 = 0
-
-public class NavigationItem {
-	/// Inset.
-	public var portraitInset: CGFloat = .iPad == MaterialDevice.type || "iPhone 6s Plus" == MaterialDevice.model || "iPhone 6 Plus" == MaterialDevice.model ? -20 : -16
-	
-	public var landscapeInset: CGFloat = -20
-	
-	/// Detail View.
-	public var detailView: UIView?
-	
-	/// Title label.
-	public var titleLabel: UILabel?
-	
-	/// Detail label.
-	public var detailLabel: UILabel?
-	
-	/// Left controls.
-	public var leftControls: Array<UIControl>?
-	
-	/// Right controls.
-	public var rightControls: Array<UIControl>?
-}
-
-public extension UINavigationItem {
-	/// NavigationBarControls reference.
-	public internal(set) var item: NavigationItem {
-		get {
-			return MaterialAssociatedObject(self, key: &NavigationItemKey) {
-				return NavigationItem()
-			}
-		}
-		set(value) {
-			MaterialAssociateObject(self, key: &NavigationItemKey, value: value)
-		}
-	}
-	
-	/// Portrait inset.
-	public var portraitInset: CGFloat {
-		get {
-			return item.portraitInset
-		}
-		set(value) {
-			item.portraitInset = value
-		}
-	}
-	
-	/// Landscape inset.
-	public var landscapeInset: CGFloat {
-		get {
-			return item.landscapeInset
-		}
-		set(value) {
-			item.landscapeInset = value
-		}
-	}
-	
-	/// Detail View.
-	public var detailView: UIView? {
-		get {
-			return item.detailView
-		}
-		set(value) {
-			item.detailView = value
-		}
-	}
-	
-	/// Title Label.
-	public var titleLabel: UILabel? {
-		get {
-			return item.titleLabel
-		}
-		set(value) {
-			item.titleLabel = value
-		}
-	}
-	
-	/// Detail Label.
-	public var detailLabel: UILabel? {
-		get {
-			return item.detailLabel
-		}
-		set(value) {
-			item.detailLabel = value
-		}
-	}
-	
-	/// Left side UIControls.
-	public var leftControls: Array<UIControl>? {
-		get {
-			return item.leftControls
-		}
-		set(value) {
-			item.leftControls = value
-		}
-	}
-	
-	/// Right side UIControls.
-	public var rightControls: Array<UIControl>? {
-		get {
-			return item.rightControls
-		}
-		set(value) {
-			item.rightControls = value
+		if nil == item.title {
+			item.title = ""
 		}
 	}
 }

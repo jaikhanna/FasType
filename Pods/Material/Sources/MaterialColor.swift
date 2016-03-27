@@ -35,10 +35,10 @@ public struct MaterialColor {
 	public static let clear: UIColor = UIColor.clearColor()
 	
 	// white
-	public static let white: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+	public static let white: UIColor = UIColor.whiteColor()
 	
 	// black
-	public static let black: UIColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+	public static let black: UIColor = UIColor.blackColor()
 	
 	// red
 	public struct red {
@@ -371,4 +371,20 @@ public struct MaterialColor {
 		public static let darken3: UIColor = UIColor(red: 55/255, green: 71/255, blue: 79/255, alpha: 1)
 		public static let darken4: UIColor = UIColor(red: 38/255, green: 50/255, blue: 56/255, alpha: 1)
 	}
+    
+    // dark text
+    public struct darkText {
+		public static let primary: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.87)
+		public static let secondary: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.54)
+		public static let others: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.38)
+		public static let dividers: UIColor = UIColor.blackColor().colorWithAlphaComponent(0.12)
+    }
+    
+    // light text
+    public struct lightText {
+        public static let primary: UIColor = UIColor.whiteColor()
+        public static let secondary: UIColor = UIColor.whiteColor().colorWithAlphaComponent(0.7)
+        public static let others: UIColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+        public static let dividers: UIColor = UIColor.whiteColor().colorWithAlphaComponent(0.12)
+    }
 }

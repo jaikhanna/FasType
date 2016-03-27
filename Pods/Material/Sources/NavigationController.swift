@@ -30,6 +30,7 @@
 
 import UIKit
 
+@IBDesignable
 public class NavigationController : UINavigationController, UIGestureRecognizerDelegate {
 	/**
 	An initializer that initializes the object with a NSCoder object.
@@ -70,7 +71,7 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 	public override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		if let v: UIGestureRecognizer = interactivePopGestureRecognizer {
-			if let x: SideNavigationViewController = sideNavigationViewController {
+			if let x: SideNavigationController = sideNavigationController {
 				if let p: UIPanGestureRecognizer = x.panGesture {
 					p.requireGestureRecognizerToFail(v)
 				}
@@ -78,9 +79,17 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 		}
 	}
 	
+	public override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		// Load the initial topItem.
+		if let v: UINavigationItem = navigationBar.topItem {
+			(navigationBar as? NavigationBar)?.layoutNavigationItem(v)
+		}
+	}
+	
 	/**
 	Detects the gesture recognizer being used. This is necessary when using 
-	SideNavigationViewController. It eliminates the conflict in panning.
+	SideNavigationController. It eliminates the conflict in panning.
 	- Parameter gestureRecognizer: A UIGestureRecognizer to detect.
 	- Parameter touch: The UITouch event.
 	- Returns: A Boolean of whether to continue the gesture or not, true yes, false no.
@@ -111,10 +120,6 @@ public class NavigationController : UINavigationController, UIGestureRecognizerD
 			v.layoutNavigationItem(item)
 		}
 		return true
-	}
-	
-	public func sideNavigationStatusBarHiddenState(sideNavigationViewController: SideNavigationViewController, hidden: Bool) {
-		print(hidden)
 	}
 	
 	/// Handler for the back button.

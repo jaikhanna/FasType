@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xK3-20-FdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="586"/>
+            <point key="canvasLocation" x="550" y="431"/>
         </scene>
         <!--InstructionsViewController-->
         <scene sceneID="e6J-uK-qQt">
@@ -265,36 +265,80 @@
                         <viewControllerLayoutGuide type="top" id="QlU-62-zZQ"/>
                         <viewControllerLayoutGuide type="bottom" id="I34-HJ-NIt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uRJ-HP-2Cm">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="uRJ-HP-2Cm" customClass="FlatButton" customModule="Material">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type fast and be Accurate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-Uc-Cb6">
                                 <rect key="frame" x="112" y="181" width="377" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="BSc-cm-4Qq"/>
+                                    <constraint firstAttribute="width" constant="377" id="uRF-uh-1Am"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="PlayNow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl" customClass="FlatButton" customModule="Material">
-                                <rect key="frame" x="232" y="336" width="136" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" ambiguous="YES" misplaced="YES" restorationIdentifier="PlayNow" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-9a-gHl" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="245" y="245" width="110" height="110"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="8c5-26-uNQ"/>
+                                    <constraint firstAttribute="height" constant="110" id="Rmx-X7-bc0"/>
+                                </constraints>
                                 <color key="tintColor" red="0.9993455497" green="0.37188428690000003" blue="0.25876833189999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Play Now!">
-                                    <color key="titleColor" red="0.99934554973821987" green="0.37188428691533693" blue="0.25876833189485804" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="play-1">
+                                    <color key="titleColor" red="0.99265426397323608" green="0.99590712785720825" blue="0.99583667516708374" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="-1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toQuestion" id="9pC-Fo-Uu9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="All you have to do is.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmL-sA-H9p">
-                                <rect key="frame" x="132" y="78" width="337" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-59-2RA">
-                                <rect key="frame" x="271" y="451" width="59" height="30"/>
-                                <state key="normal" title="Connect"/>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cooltext173809073720524" translatesAutoresizingMaskIntoConstraints="NO" id="NuI-1e-F1t">
+                                <rect key="frame" x="120" y="69" width="361" height="104"/>
+                                <color key="tintColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="UTI-SQ-aUk"/>
+                                    <constraint firstAttribute="width" constant="361" id="u11-Ot-76d"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-59-2RA" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="191" y="522" width="218" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.22801743790000001" green="0.94308517879999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.031945720380000001" green="0.56311088389999997" blue="0.90394176140000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="connectWithPlayer:" destination="Yye-ks-Egl" eventType="touchUpInside" id="CLz-Ur-H6S"/>
                                 </connections>
@@ -302,12 +346,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b3a-59-2RA" firstAttribute="top" secondItem="IkQ-9a-gHl" secondAttribute="bottom" constant="53" id="0w6-99-khk"/>
-                            <constraint firstItem="b3a-59-2RA" firstAttribute="centerX" secondItem="IkQ-9a-gHl" secondAttribute="centerX" id="Dt5-vz-qea"/>
-                            <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="GqX-mj-NZz"/>
-                            <constraint firstItem="I34-HJ-NIt" firstAttribute="top" secondItem="b3a-59-2RA" secondAttribute="bottom" constant="119" id="T5V-8t-Yvh"/>
-                            <constraint firstItem="MmL-sA-H9p" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="TNM-wn-bl4"/>
+                            <constraint firstItem="b3a-59-2RA" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="0TB-WQ-lLe"/>
+                            <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Iak-Ft-Vsp"/>
+                            <constraint firstItem="NuI-1e-F1t" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="UJR-0r-cpb"/>
                             <constraint firstItem="Uwo-Uc-Cb6" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Xdp-SU-g8d"/>
+                            <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="hqA-YF-gsX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -319,6 +362,10 @@
             <point key="canvasLocation" x="-2407" y="902"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cooltext173809073720524" width="424" height="116"/>
+        <image name="play-1" width="127" height="124"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9pC-Fo-Uu9"/>
     </inferredMetricsTieBreakers>
