@@ -1,0 +1,13 @@
+PODS:
+  - JTFadingInfoView (1.0.2)
+  - Material (1.37.3)
+
+DEPENDENCIES:
+  - JTFadingInfoView
+  - Material (~> 1.0)
+
+SPEC CHECKSUMS:
+  JTFadingInfoView: 9fcb410da4bf8e3ce722b04b14ee0046a8f13a65
+  Material: e191133dd6e34f55fe8b25795ecfc7d4e8359417
+
+COCOAPODS: 0.39.0

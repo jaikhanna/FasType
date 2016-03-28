@@ -14,40 +14,57 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="FabButton" customModule="Material">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-yg-gFS">
-                                <rect key="frame" x="114" y="278" width="372" height="30"/>
+                                <rect key="frame" x="125" y="415" width="350" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAg-y1-XlK">
-                                <rect key="frame" x="49" y="123" width="503" height="140"/>
-                                <color key="backgroundColor" red="0.31305152177810669" green="0.78205901384353638" blue="0.9358251690864563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="170" y="169" width="260" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="LHS-JK-jO4"/>
+                                    <constraint firstAttribute="height" constant="140" id="dJS-5K-10S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MicrosoftSansSerif" family="Microsoft Sans Serif" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhn-Vk-fIC">
-                                <rect key="frame" x="235" y="52" width="131" height="70"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" staticText="YES" searchField="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7t-QT-cW1">
+                                <rect key="frame" x="245" y="20" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="ZtZ-oo-bfH"/>
+                                    <constraint firstAttribute="height" constant="110" id="xUq-o5-uv4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJw-XN-kuC">
-                                <rect key="frame" x="215" y="357" width="170" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJw-XN-kuC" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="191" y="339" width="218" height="45"/>
                                 <color key="backgroundColor" red="0.31305152177810669" green="0.78205901384353638" blue="0.9358251690864563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="uK7-KP-D6B"/>
+                                    <constraint firstAttribute="width" constant="218" id="vzx-LB-Rli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="1" green="0.0" blue="0.71507504111842102" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitResponse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKV-yS-X9v"/>
                                     <segue destination="bTW-0L-SUV" kind="show" identifier="inputToScore" id="NBQ-BE-a0N"/>
@@ -56,15 +73,26 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FAg-y1-XlK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5yk-9u-Zid"/>
-                            <constraint firstItem="oJw-XN-kuC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HE1-N8-IV4"/>
-                            <constraint firstItem="Rha-yg-gFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QeN-v1-iwA"/>
-                            <constraint firstItem="nhn-Vk-fIC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UaZ-e8-zeN"/>
+                            <constraint firstItem="C7t-QT-cW1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PPb-OU-7qT"/>
+                            <constraint firstItem="FAg-y1-XlK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kI9-RU-wrN"/>
+                            <constraint firstItem="oJw-XN-kuC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lDt-q1-Iky"/>
+                            <constraint firstItem="Rha-yg-gFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSs-04-9cY"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                <color key="value" red="1" green="0.0" blue="0.71507504109999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="EkD-A9-csB"/>
                     <connections>
-                        <outlet property="countingLabel" destination="nhn-Vk-fIC" id="f79-OX-7lQ"/>
+                        <outlet property="countingLabel" destination="C7t-QT-cW1" id="ZWh-lL-TYb"/>
                         <outlet property="questionString" destination="FAg-y1-XlK" id="Flp-Mw-0YF"/>
                         <outlet property="userInput" destination="Rha-yg-gFS" id="MDd-zx-ZeN"/>
                     </connections>
@@ -113,35 +141,6 @@
                                     <segue destination="FcH-fu-YlQ" kind="show" identifier="helpHumanity" id="fUf-Pq-dXw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-v5-bA1" customClass="FabButton" customModule="Material">
-                                <rect key="frame" x="192" y="579" width="218" height="45"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="218" id="imb-L1-fig"/>
-                                    <constraint firstAttribute="height" constant="45" id="vtL-4b-yFa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Results">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="23"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
-                                        <color key="value" red="0.9882352941176471" green="0.41119035813338489" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="ScoreCard-1" translatesAutoresizingMaskIntoConstraints="NO" id="t7w-7H-IG4">
                                 <rect key="frame" x="126" y="28" width="350" height="80"/>
                                 <color key="tintColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,7 +158,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Vr-ccZ" customClass="FabButton" customModule="Material">
-                                <rect key="frame" x="272" y="506" width="58" height="56"/>
+                                <rect key="frame" x="271" y="578" width="58" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="lvG-Kt-w26"/>
@@ -200,12 +199,41 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="resetGame" id="BHa-AL-GEI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgt-v5-bA1" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="191" y="509" width="218" height="45"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="imb-L1-fig"/>
+                                    <constraint firstAttribute="height" constant="45" id="vtL-4b-yFa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Results">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.9882352941176471" green="0.41119035813338489" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="0kV-y9-f0c"/>
                             <constraint firstItem="Tco-yd-mdt" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="28t-pE-IrL"/>
-                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="Rl3-xL-zZV"/>
+                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="9BE-JJ-d54"/>
+                            <constraint firstItem="Tgt-v5-bA1" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="Fq8-nt-lV8"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
                             <constraint firstItem="u7Y-A0-Fuu" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="cLP-Yf-nsN"/>
                             <constraint firstItem="t7w-7H-IG4" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="pO1-yn-jHa"/>

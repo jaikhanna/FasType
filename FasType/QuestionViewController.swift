@@ -18,7 +18,9 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var questionString: UILabel!
     @IBOutlet weak var userInput: UITextField!
     
-    @IBOutlet var countingLabel: UILabel!
+
+    @IBOutlet weak var countingLabel: UILabel!
+    
     var timer = NSTimer()
     var counter = 0
     var appDelegate:AppDelegate!
@@ -37,7 +39,24 @@ class QuestionViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         [userInput .becomeFirstResponder()]
         
+        //Timer UI
+        countingLabel.layer.borderWidth = 5.0
+        countingLabel.layer.borderColor = UIColor.magentaColor().CGColor
+        countingLabel.layer.cornerRadius = 50
+        
+        
+        //questionString UI
+        questionString.layer.borderWidth = 2.0
+        questionString.layer.borderColor = UIColor.magentaColor().CGColor
+        questionString.layer.cornerRadius = 8
+        questionString.layer.masksToBounds = true
+
+        
+//        userInput.returnKeyType = UIReturnKeyType.Go
+        
         countingLabel.text = String(counter)
+        
+
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         
 //        self.navigationItem.setHidesBackButton(true, animated:true);
@@ -165,7 +184,7 @@ class QuestionViewController: UIViewController {
                 let svc = segue.destinationViewController as! ScoreViewController
                 svc.answer = userInput.text
                 svc.question = questionString.text
-                svc.totalTime = countingLabel.text
+//                svc.totalTime = countingLabel.text
                 svc.appDelegate = self.appDelegate
 //                callToScript("http://jaikhanna.byethost7.com/Jai_Khanna_Profile/Projects/FasType/gameStatus.php?q=update")
                 let callResult = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=update")
@@ -175,6 +194,5 @@ class QuestionViewController: UIViewController {
     func updateCounter(){
         countingLabel.text = String(counter++)
     }
-
 }
 
