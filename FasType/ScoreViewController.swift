@@ -29,6 +29,7 @@ class ScoreViewController: UIViewController {
 //    var winner: String = ""
     var x: Dictionary<String,String>?
     var data: NSArray = []
+    var changeCode: Int = 0
     
     var numberOfPlayersDone: Int = 0
     
@@ -106,11 +107,41 @@ class ScoreViewController: UIViewController {
             
         }else{
             
-            //calculate the score
+            //calculate the score TODO: decide exact scoring algo
             questionLen = Double(question.characters.count)
             levScore = Double(levenshtein(answer,bStr: question))
             
             self.finalScore = round(((questionLen - levScore)/questionLen) * 100)
+            
+            //PJ algo variables - 80/20 algo
+            let typingAvg = 150 //=> 150 chars/minute
+            let typingAvgPerSec = 0.4 //=> 0.4 seconds/char
+            let typingAvgCurrentQuestion = questionLen*0.4
+            
+            var accuracy80 = (finalScore*80)/100
+            var time20 = (200 - ((Double(totalTime)! * 100)/typingAvgCurrentQuestion))/5
+            
+            if time20>20{
+                time20 = 20
+            }
+            
+            
+            finalScore = accuracy80 + time20
+            if finalScore<0{
+                finalScore = 0
+            }
+            
+            
+//            if Double(totalTime) > typingAvgCurrentQuestion{
+//                
+//                var time20 = (200 - ((Double(totalTime)! * 100)/typingAvgCurrentQuestion))/5
+//                
+//            }
+//                
+//            else{
+//                var time20 = ((Double(totalTime)! * 100)/typingAvgCurrentQuestion)
+//            }
+            
             userScore.text = "Your score is: \(Int(finalScore)) %"
             misMatch.text = "Mismatch character(s): \(Int(levScore))"
             timeTaken.text = "You took \(totalTime) seconds"
@@ -124,6 +155,7 @@ class ScoreViewController: UIViewController {
             
             var count = Int(checkPlayerDoneCount!["count"]!)
             
+            //TODO: print loading gif or whatever while the 'while' is still alive
             while(count < appDelegate.mpcHandler.session.connectedPeers.count+1){
                 print("checking status")
                 sleep(1)
@@ -132,7 +164,9 @@ class ScoreViewController: UIViewController {
                 continue
             }
             
-            //comes here only when all players are on the same page
+            
+            //comes here only when all players are on the same page - aka ready-to-receive-data state
+            
             //now, send every player's score to every other player
             let messageDict = ["score":Int(self.finalScore)]
             
@@ -168,14 +202,18 @@ class ScoreViewController: UIViewController {
             
             //request for new game
             if message!.objectForKey("status")?.isEqualToString("New Game") == true{
+                
+                changeCode = message!.objectForKey("changeCode")!.integerValue
+                
                 let alert1 = UIAlertController(title: "FasType", message: "\(senderDisplayName) has started a new game", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 alert1.addAction(
                     UIAlertAction(title: "Challenge Accepted!", style: UIAlertActionStyle.Default) { (action) -> Void in
-                        let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
+//                        let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
+
+//                        self.playerScores.removeAll()
                         
-                        
-                        self.newGame()
+//                        self.newGame()
                         
                         //TODO: take each player back to the questions page
                         self.performSegueWithIdentifier("resetGame", sender: self)
@@ -241,24 +279,42 @@ class ScoreViewController: UIViewController {
         if(playerScores.count == appDelegate.mpcHandler.session.connectedPeers.count+1)
         {
             var maxScore: Int = -999999
+            
             var checkTie: Int = 0
             var tieScore: Int = 0
             var i: Int = 0
             
+            var arrayKeys = Array(playerScores.keys)
+            var x = arrayKeys[0]
+            var flag = 0
+            
+            for j in 1...arrayKeys.count{
+                
+                if arrayKeys[j] == x{
+                    continue
+                }
+                else{
+                    flag = 1
+                    break
+                }
+            }
+            
             
             //check for a tie
             
-            for (score, playerId) in playerScores {
-                
-                if(i == 0){
-                    tieScore = score
-                    i++
-                }
-                    
-                if(score == tieScore){
-                    checkTie++
-                }
-            }
+//            for (score, playerId) in playerScores {
+//                
+//                if(i == 0){
+//                    tieScore = score
+//                    i++
+//                }
+//                else{
+//                    if(score == tieScore){
+//                        checkTie++
+//                    }
+//                }
+//                
+//            }
 
             
             
@@ -272,14 +328,17 @@ class ScoreViewController: UIViewController {
                 }
             }
             
-            if(checkTie == appDelegate.mpcHandler.session.connectedPeers.count+1){
+            print(flag)
+            
+            if(flag == 0 /*checkTie == appDelegate.mpcHandler.session.connectedPeers.count*/){
+                
                 let alert = UIAlertController(title: "Results", message: "Its a tie guys!", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 alert.addAction(
                     UIAlertAction(title: "Huh!", style: UIAlertActionStyle.Default) { (action) -> Void in
                         print("")
-                        var clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
-                        self.newGame()
+//                        var clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
+//                        self.newGame()
                     })
                 
                 self.presentViewController(alert, animated: true, completion: nil)
@@ -294,7 +353,7 @@ class ScoreViewController: UIViewController {
                         print("")
                         print(self.playerScores)
                         
-                        //testing resultsView
+                        //alert all results - aka resultsView
                         
                         var resultsMessage: String = ""
                         
@@ -310,14 +369,6 @@ class ScoreViewController: UIViewController {
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in })
                         
                         self.presentViewController(alert, animated: true, completion: nil)
-                        
-                        
-                        //testing ends here
-                        
-                        
-                        
-                        
-                        
                         
                         let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
                     })
@@ -359,7 +410,7 @@ class ScoreViewController: UIViewController {
     func newGame(){
         
         self.playerScores.removeAll()
-        let messageDict = ["status":"New Game"]
+        let messageDict = ["status":"New Game", "changeCode": "1"]
         
         let messageData = try? NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted)
         
@@ -368,6 +419,12 @@ class ScoreViewController: UIViewController {
         } catch let error1 as NSError {
             print(error1)
         }
+        
+        if changeCode == 0 {
+            let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
+        }
+        
+        
     }
     
     func callToScript(url: String) -> Dictionary<String,String>? {

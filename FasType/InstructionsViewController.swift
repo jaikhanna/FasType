@@ -26,6 +26,7 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
         appDelegate.mpcHandler.setupSession()
         appDelegate.mpcHandler.advertiseSelf(true)
         
+        
 //        PlayNow.setTitle("NewPlay", forState: .Normal)
 //        PlayNow.titleLabel!.font = RobotoFont.mediumWithSize(32)
 //        PlayNow.setTitleColor(UIColor.greenColor(), forState: .Normal)
@@ -89,14 +90,14 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
 //    }
     
     //testing the 'segue' method of making this work!
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
-//        if identifier == "toQuestion" {
-//           return true
-//        }
-//        
-        // by default, transition
-        return true
-    }
+//    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
+////        if identifier == "toQuestion" {
+////           return true
+////        }
+////        
+//        // by default, transition
+//        return true
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if segue.identifier == "toQuestion"{
@@ -105,7 +106,6 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
             tq.appDelegate = appDelegate
         }
     }
-    
     
     
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController) {

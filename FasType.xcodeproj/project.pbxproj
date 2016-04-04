@@ -19,6 +19,7 @@
 		4868E47E1BF8181200744ED1 /* FasTypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4868E47D1BF8181200744ED1 /* FasTypeUITests.swift */; };
 		487355421BF89E8E0098BAC3 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487355411BF89E8E0098BAC3 /* InstructionsViewController.swift */; };
 		487D2C141BF827DA00D5C8C0 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487D2C131BF827DA00D5C8C0 /* ScoreViewController.swift */; };
+		48CFF39E1CB0C748009A8E25 /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CFF39D1CB0C748009A8E25 /* JSSAlertView.swift */; };
 		48F1D17A1C841FFA00A3FC77 /* MPCHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		4868E47F1BF8181200744ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487355411BF89E8E0098BAC3 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		487D2C131BF827DA00D5C8C0 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		48CFF39D1CB0C748009A8E25 /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSSAlertView.swift; path = ../JSSAlertView.swift; sourceTree = "<group>"; };
 		48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPCHandler.swift; sourceTree = "<group>"; };
 		4AEBAA57844ADC92BD503181 /* Pods-FasType.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FasType.release.xcconfig"; path = "Pods/Target Support Files/Pods-FasType/Pods-FasType.release.xcconfig"; sourceTree = "<group>"; };
 		6254C3CB6DC883B74C2B2324 /* Pods_FasType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FasType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 		4868E45C1BF8181200744ED1 /* FasType */ = {
 			isa = PBXGroup;
 			children = (
+				48CFF39D1CB0C748009A8E25 /* JSSAlertView.swift */,
 				4868E45D1BF8181200744ED1 /* AppDelegate.swift */,
 				4868E45F1BF8181200744ED1 /* QuestionViewController.swift */,
 				48F1D1791C841FFA00A3FC77 /* MPCHandler.swift */,
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CFF39E1CB0C748009A8E25 /* JSSAlertView.swift in Sources */,
 				483FB0281BF8B40900CE7F6F /* HumanityThanksViewController.swift in Sources */,
 				483FB0261BF8AB9900CE7F6F /* HelpHumanityViewController.swift in Sources */,
 				4868E4601BF8181200744ED1 /* QuestionViewController.swift in Sources */,
@@ -498,6 +502,7 @@
 			baseConfigurationReference = C27F63C95D55413E3717621E /* Pods-FasType.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FasType/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkhanna.FasType;
@@ -510,6 +515,7 @@
 			baseConfigurationReference = 4AEBAA57844ADC92BD503181 /* Pods-FasType.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FasType/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jkhanna.FasType;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yye-ks-Egl">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -32,6 +32,7 @@
                                 <fontDescription key="fontDescription" name="MicrosoftSansSerif" family="Microsoft Sans Serif" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7t-QT-cW1">
                                 <rect key="frame" x="245" y="20" width="110" height="110"/>
@@ -125,7 +126,7 @@
                                 <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-A0-Fuu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-A0-Fuu">
                                 <rect key="frame" x="69" y="390" width="441" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.9882352941176471" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,16 +169,12 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1110" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="39" height="25"/>
-                                <state key="normal" backgroundImage="replay-512-3">
-                                    <color key="titleColor" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="replay-512-4-try2">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="13"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.0"/>
@@ -185,14 +182,16 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
                                         <color key="value" red="0.98823529409999999" green="0.41119035809999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseScale" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseFocus" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -223,6 +222,8 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
                                         <color key="value" red="0.9882352941176471" green="0.41119035813338489" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseFocus" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseScale" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
@@ -235,7 +236,6 @@
                             <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="9BE-JJ-d54"/>
                             <constraint firstItem="Tgt-v5-bA1" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="Fq8-nt-lV8"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
-                            <constraint firstItem="u7Y-A0-Fuu" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="cLP-Yf-nsN"/>
                             <constraint firstItem="t7w-7H-IG4" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="pO1-yn-jHa"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -366,13 +366,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type fast and be Accurate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-Uc-Cb6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type fast and be accurate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-Uc-Cb6">
                                 <rect key="frame" x="112" y="181" width="377" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="BSc-cm-4Qq"/>
                                     <constraint firstAttribute="width" constant="377" id="uRF-uh-1Am"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Chalkboard" family="Chalkboard" pointSize="18"/>
                                 <color key="textColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -380,8 +380,8 @@
                                 <rect key="frame" x="245" y="245" width="110" height="110"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="8c5-26-uNQ"/>
-                                    <constraint firstAttribute="height" constant="110" id="Rmx-X7-bc0"/>
+                                    <constraint firstAttribute="height" constant="110" id="Ba6-AH-siT"/>
+                                    <constraint firstAttribute="width" constant="110" id="cKW-y0-EeU"/>
                                 </constraints>
                                 <color key="tintColor" red="0.9993455497" green="0.37188428690000003" blue="0.25876833189999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" backgroundImage="play-1">
@@ -411,8 +411,8 @@
                                 <color key="tintColor" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="104" id="UTI-SQ-aUk"/>
-                                    <constraint firstAttribute="width" constant="361" id="u11-Ot-76d"/>
+                                    <constraint firstAttribute="height" constant="104" id="HFU-ub-i79"/>
+                                    <constraint firstAttribute="width" constant="361" id="HjI-Bh-4Fv"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-59-2RA" customClass="FabButton" customModule="Material">
@@ -463,7 +463,7 @@
         <image name="ScoreCard-1" width="428" height="80"/>
         <image name="cooltext173809073720524" width="424" height="116"/>
         <image name="play-1" width="127" height="124"/>
-        <image name="replay-512-3" width="451" height="404"/>
+        <image name="replay-512-4-try2" width="512" height="512"/>
         <image name="trophy2" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>

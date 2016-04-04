@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITextFieldDelegate {
     
     
     
@@ -30,6 +30,11 @@ class QuestionViewController: UIViewController {
         
     }
     
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        userText.resignFirstResponder()
+        return true;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +43,7 @@ class QuestionViewController: UIViewController {
 
         // Do any additional setup after loading the view, typically from a nib.
         [userInput .becomeFirstResponder()]
+        self.userInput.delegate = self
         
         //Timer UI
         countingLabel.layer.borderWidth = 5.0
@@ -50,10 +56,22 @@ class QuestionViewController: UIViewController {
         questionString.layer.borderColor = UIColor.magentaColor().CGColor
         questionString.layer.cornerRadius = 8
         questionString.layer.masksToBounds = true
-
         
-//        userInput.returnKeyType = UIReturnKeyType.Go
+        //Card view to questionString - not working
+//        questionString.layer.masksToBounds = false
+//        questionString.layer.shadowColor = UIColor.redColor().CGColor
+//        questionString.layer.shadowOffset = CGSizeMake(0, 3)
+//        questionString.layer.shadowOpacity = 0.5
+//        
+//        let offset = CGSize(width: -4.0, height: 4.0)
+//        questionString.layer.shadowOffset = offset
+//        questionString.layer.shadowOpacity = 0.9
+//        questionString.layer.shadowRadius = 2.0
+//        questionString.layer.shadowColor = UIColor.magentaColor().CGColor
         
+        //trying to hide the keyboard when user touches outside it/ presses 'done'
+        userInput.returnKeyType = UIReturnKeyType.Done
+            
         countingLabel.text = String(counter)
         
 
@@ -184,7 +202,7 @@ class QuestionViewController: UIViewController {
                 let svc = segue.destinationViewController as! ScoreViewController
                 svc.answer = userInput.text
                 svc.question = questionString.text
-//                svc.totalTime = countingLabel.text
+                svc.totalTime = countingLabel.text
                 svc.appDelegate = self.appDelegate
 //                callToScript("http://jaikhanna.byethost7.com/Jai_Khanna_Profile/Projects/FasType/gameStatus.php?q=update")
                 let callResult = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=update")
