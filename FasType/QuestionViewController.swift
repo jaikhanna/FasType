@@ -198,6 +198,8 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
             if segue.identifier == "inputToScore"{
                 
+                
+                
                 timer.invalidate()
                 let svc = segue.destinationViewController as! ScoreViewController
                 svc.answer = userInput.text

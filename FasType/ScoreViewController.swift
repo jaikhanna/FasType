@@ -25,8 +25,7 @@ class ScoreViewController: UIViewController {
     var finalScore: Double!
     var questionLen: Double!
     var totalTime: String!
-    var playerScores = [Int: MCPeerID]()
-//    var winner: String = ""
+    var playerScores = [MCPeerID: Int]()
     var x: Dictionary<String,String>?
     var data: NSArray = []
     var changeCode: Int = 0
@@ -107,12 +106,13 @@ class ScoreViewController: UIViewController {
             
         }else{
             
-            //calculate the score TODO: decide exact scoring algo
+            //calculate the score
             questionLen = Double(question.characters.count)
             levScore = Double(levenshtein(answer,bStr: question))
             
             self.finalScore = round(((questionLen - levScore)/questionLen) * 100)
             
+            //TODO: use 60/40 algo
             //PJ algo variables - 80/20 algo
             let typingAvg = 150 //=> 150 chars/minute
             let typingAvgPerSec = 0.4 //=> 0.4 seconds/char
@@ -121,9 +121,9 @@ class ScoreViewController: UIViewController {
             var accuracy80 = (finalScore*80)/100
             var time20 = (200 - ((Double(totalTime)! * 100)/typingAvgCurrentQuestion))/5
             
-            if time20>20{
-                time20 = 20
-            }
+//            if time20>20{
+//                time20 = 20
+//            }
             
             
             finalScore = accuracy80 + time20
@@ -132,23 +132,16 @@ class ScoreViewController: UIViewController {
             }
             
             
-//            if Double(totalTime) > typingAvgCurrentQuestion{
-//                
-//                var time20 = (200 - ((Double(totalTime)! * 100)/typingAvgCurrentQuestion))/5
-//                
-//            }
-//                
-//            else{
-//                var time20 = ((Double(totalTime)! * 100)/typingAvgCurrentQuestion)
-//            }
             
-            userScore.text = "Your score is: \(Int(finalScore)) %"
             misMatch.text = "Mismatch character(s): \(Int(levScore))"
             timeTaken.text = "You took \(totalTime) seconds"
+            userScore.text = "Your score is: \(Int(finalScore)) %"
             
             
             //update self score to playerScores
-            playerScores[Int(self.finalScore)] = appDelegate.mpcHandler.session.myPeerID
+            playerScores[appDelegate.mpcHandler.session.myPeerID] = Int(self.finalScore)
+            
+            
             
             //check if all players are on the same page
             var checkPlayerDoneCount: Dictionary<String, String>? = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=retrieve")
@@ -167,7 +160,7 @@ class ScoreViewController: UIViewController {
             
             //comes here only when all players are on the same page - aka ready-to-receive-data state
             
-            //now, send every player's score to every other player
+            //now, send player's score to every other player
             let messageDict = ["score":Int(self.finalScore)]
             
             do{
@@ -257,7 +250,7 @@ class ScoreViewController: UIViewController {
                 print("score received from \(senderDisplayName)")
                 
                 //add player and its score to the dictionary
-                playerScores[score] = senderPeerId
+                playerScores[senderPeerId] = score
                 
                 checkResults()
             }
@@ -278,48 +271,55 @@ class ScoreViewController: UIViewController {
  
         if(playerScores.count == appDelegate.mpcHandler.session.connectedPeers.count+1)
         {
+            
+            print("inside checkResults ka IF")
+            
             var maxScore: Int = -999999
             
             var checkTie: Int = 0
             var tieScore: Int = 0
             var i: Int = 0
             
-            var arrayKeys = Array(playerScores.keys)
-            var x = arrayKeys[0]
-            var flag = 0
+//            var arrayKeys = Array(playerScores.keys)
             
-            for j in 1...arrayKeys.count{
-                
-                if arrayKeys[j] == x{
-                    continue
-                }
-                else{
-                    flag = 1
-                    break
-                }
-            }
+//            var x = arrayKeys[0]
+            var flag = 0
+//            
+//            for j in 1...arrayKeys.count{
+//                
+//                if arrayKeys[j] == x{
+//                    continue
+//                }
+//                else{
+//                    flag = 1
+//                    break
+//                }
+//            }
             
             
             //check for a tie
             
-//            for (score, playerId) in playerScores {
-//                
-//                if(i == 0){
-//                    tieScore = score
-//                    i++
-//                }
-//                else{
-//                    if(score == tieScore){
-//                        checkTie++
-//                    }
-//                }
-//                
-//            }
+            for (playerId, score) in playerScores {
+                
+                if(i == 0){
+                    tieScore = score
+                    i++
+                }
+                else{
+                    if(score == tieScore){
+                        checkTie++
+                    }
+                    else{
+                        break
+                    }
+                }
+                
+            }
 
             
             
             //find winner
-            for (score, playerId) in playerScores {
+            for (playerId, score) in playerScores {
                 print("\(score): \(playerId)")
                 
                 if(score>maxScore){
@@ -328,9 +328,9 @@ class ScoreViewController: UIViewController {
                 }
             }
             
-            print(flag)
+            print("flag: \(flag)")
             
-            if(flag == 0 /*checkTie == appDelegate.mpcHandler.session.connectedPeers.count*/){
+            if(checkTie == appDelegate.mpcHandler.session.connectedPeers.count){
                 
                 let alert = UIAlertController(title: "Results", message: "Its a tie guys!", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -343,7 +343,7 @@ class ScoreViewController: UIViewController {
                 
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-            else{
+            else{ //if not a tie
                 
                 //self alert now
                 let alert = UIAlertController(title: "Results", message: "The winner is \(winner)", preferredStyle: UIAlertControllerStyle.Alert)
@@ -357,7 +357,7 @@ class ScoreViewController: UIViewController {
                         
                         var resultsMessage: String = ""
                         
-                        for (score1, playerId1) in self.playerScores {
+                        for (playerId1, score1) in self.playerScores {
                             
                             resultsMessage += "\(playerId1.displayName) scored \(score1)% \r\n"
                         }
@@ -451,7 +451,7 @@ class ScoreViewController: UIViewController {
         //create message string with the results
         var resultsMessage: String = ""
         
-        for (score, playerId) in playerScores {
+        for (playerId, score) in playerScores {
             //            print("\(score): \(playerId)")
             resultsMessage += "\(playerId.displayName) scored \(score)% \r\n"
         }
@@ -465,6 +465,14 @@ class ScoreViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    
+    @IBAction func leaveSession(sender: AnyObject) {
+        
+        appDelegate.mpcHandler.session.disconnect()
+//        self.performSegueWithIdentifier("resetGame", sender: self)
+    }
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
         if segue.identifier == "resetGame"{
@@ -472,6 +480,9 @@ class ScoreViewController: UIViewController {
             let qvc = segue.destinationViewController as! QuestionViewController
             qvc.appDelegate = appDelegate
         }
+        
+//        else if segue.identifier == "leaveSession"{
+//        }
     }
     
 }

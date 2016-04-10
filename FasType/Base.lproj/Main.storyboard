@@ -159,7 +159,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-Vr-ccZ" customClass="FabButton" customModule="Material">
-                                <rect key="frame" x="271" y="578" width="58" height="56"/>
+                                <rect key="frame" x="191" y="573" width="58" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="lvG-Kt-w26"/>
@@ -169,12 +169,12 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1110" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="39" height="25"/>
-                                <state key="normal" backgroundImage="replay-512-4-try2">
+                                <state key="normal" backgroundImage="replay-try-5">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="13"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.0"/>
@@ -188,10 +188,8 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
                                         <color key="value" red="0.98823529409999999" green="0.41119035809999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseScale" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pulseFocus" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -229,14 +227,53 @@
                                     <action selector="viewResults:" destination="bTW-0L-SUV" eventType="touchUpInside" id="a8V-31-3er"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VN-fv-ieH" customClass="FabButton" customModule="Material">
+                                <rect key="frame" x="351" y="573" width="58" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="OHl-KD-oDb"/>
+                                    <constraint firstAttribute="height" constant="56" id="YzQ-o5-4Gs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="1110" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="39" height="25"/>
+                                <state key="normal" backgroundImage="exit-try-black-3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.98823529409999999" green="0.41119035809999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.98823529409999999" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leaveSession:" destination="bTW-0L-SUV" eventType="touchUpInside" id="0IX-TX-17F"/>
+                                    <segue destination="Yye-ks-Egl" kind="presentation" identifier="leaveSession" id="a6H-Ju-xTs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Tco-yd-mdt" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="28t-pE-IrL"/>
-                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="9BE-JJ-d54"/>
+                            <constraint firstItem="6VN-fv-ieH" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" constant="80" id="EFH-s9-vOi"/>
                             <constraint firstItem="Tgt-v5-bA1" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="Fq8-nt-lV8"/>
                             <constraint firstItem="V20-R6-RTc" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="ZpY-IB-iCN"/>
+                            <constraint firstItem="tCQ-Vr-ccZ" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" constant="-80" id="jun-l1-2jK"/>
                             <constraint firstItem="t7w-7H-IG4" firstAttribute="centerX" secondItem="FeD-U7-FHG" secondAttribute="centerX" id="pO1-yn-jHa"/>
+                            <constraint firstItem="6VN-fv-ieH" firstAttribute="leading" secondItem="tCQ-Vr-ccZ" secondAttribute="trailing" constant="102" id="vzs-Sy-6mb"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -424,7 +461,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.22801743790000001" green="0.94308517879999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.080779238870000006" green="0.87248985030000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="23"/>
@@ -440,11 +477,20 @@
                                     <action selector="connectWithPlayer:" destination="Yye-ks-Egl" eventType="touchUpInside" id="CLz-Ur-H6S"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oVc-Vf-h3M">
+                                <rect key="frame" x="282" y="378" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="44u-yg-ias"/>
+                                    <constraint firstAttribute="height" constant="37" id="ImP-qv-wHj"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="b3a-59-2RA" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="0TB-WQ-lLe"/>
                             <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Iak-Ft-Vsp"/>
+                            <constraint firstItem="oVc-Vf-h3M" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Mwa-NF-rIQ"/>
                             <constraint firstItem="NuI-1e-F1t" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="UJR-0r-cpb"/>
                             <constraint firstItem="Uwo-Uc-Cb6" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="Xdp-SU-g8d"/>
                             <constraint firstItem="IkQ-9a-gHl" firstAttribute="centerX" secondItem="uRJ-HP-2Cm" secondAttribute="centerX" id="hqA-YF-gsX"/>
@@ -452,18 +498,20 @@
                     </view>
                     <connections>
                         <outlet property="PlayNow" destination="IkQ-9a-gHl" id="bw0-va-YIr"/>
+                        <outlet property="loadingIndicator" destination="oVc-Vf-h3M" id="vxU-bd-Bcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4C-Ht-xRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2407" y="902"/>
+            <point key="canvasLocation" x="-2559" y="2066"/>
         </scene>
     </scenes>
     <resources>
         <image name="ScoreCard-1" width="428" height="80"/>
         <image name="cooltext173809073720524" width="424" height="116"/>
+        <image name="exit-try-black-3" width="424" height="424"/>
         <image name="play-1" width="127" height="124"/>
-        <image name="replay-512-4-try2" width="512" height="512"/>
+        <image name="replay-try-5" width="512" height="512"/>
         <image name="trophy2" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>

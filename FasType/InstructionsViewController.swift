@@ -19,6 +19,9 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
     
     @IBOutlet weak var PlayNow: FabButton!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -101,6 +104,9 @@ class InstructionsViewController: UIViewController, MCBrowserViewControllerDeleg
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         if segue.identifier == "toQuestion"{
+            
+            //loading sign
+            loadingIndicator.startAnimating()
             
             let tq = segue.destinationViewController as! QuestionViewController
             tq.appDelegate = appDelegate
