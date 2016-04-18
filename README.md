@@ -24,12 +24,12 @@ If you face any issues at any point, you can contact us at <jkhanna@usc.edu> or 
 ##License
 Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. http://cosmicmind.io. All rights reserved.
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
-Redistributions of source code must retain the above copyright notice, this
+2. Redistributions of source code must retain the above copyright notice, this
 list of conditions and the following disclaimer.
 
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 
 Neither the name of Material nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
