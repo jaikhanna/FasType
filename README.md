@@ -14,7 +14,7 @@ Note that although this app runs on all iOS devices on iOS 9.0 or greater, we pr
 4. At this point, you might want to change the <b>Bundle Identifier</b> to a unique text to be able to run the app from your Mac. We suggest you change it to <b>com.XXXX.FasType</b> where <b>XXXX</b> comes from your email address - XXXX@someDomain.com.
 5. You might also want to click on the <b>Team</b> dropdown and then <b>Add an Account...</b>. This will require you to enter your Apple Id and password (The app does <b>not</b> store your credentials at any point).
 6. Open Terminal and cd into the downloaded project folder. 
-7. Type gem which cocoapods - This should tell you if you have cocoapods installed or not. If not then run "sudo grm install cocoapods".
+7. Type gem which cocoapods - This should tell you if you have cocoapods installed or not. If not then run <b>sudo gem install cocoapods</b>.
 8. Run pod install and wait till the command finishes running.
 9. Now, you can connect your device and run the app by clicking on the play/build & run button in Xcode.
 10. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings->General->Device Management->Your Apple ID->Trust "Your Apple ID"->Trust.
