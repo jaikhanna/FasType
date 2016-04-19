@@ -10,13 +10,16 @@ Note that although this app runs on all iOS devices on iOS 9.0 or greater, we pr
 ```
 1. Download the source onto your Mac.
 2. Open the downloaded folder and open the file named <b>FasType.xcworkspace</b>. This should open up Xcode and you should now be able to see the project classes and folders.
-3. In the Project Navigator on the left column, click on the highest directory folder named <b>FasType.xcodeproj</b/> and this open the project settings.
+3. In the Project Navigator on the left column, click on the highest directory folder named <b>FasType.xcodeproj</b/> and this should open the project settings.
 4. At this point, you might want to change the <b>Bundle Identifier</b> to a unique text to be able to run the app from your Mac. We suggest you change it to <b>com.XXXX.FasType</b> where <b>XXXX</b> comes from your email address - XXXX@someDomain.com.
-5. To be able to run the app on a physical iOS device, you might also want to click on the <b>Team</b> dropdown and then <b>Add an Account...</b>. This will require you to enter your Apple Id and password (The app does <b>not</b> store your credentials at any point).
-6. Now, you can connect your device and run the app by clicking on the play/ build & run button in Xcode.
-7. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings->General->Device Management->Your Apple ID->Verify Apps->Verify.
-8. You can now go back to Xcode and run the app again. 
-9. The final step - <b>Enjoy!</b>
+5. You might also want to click on the <b>Team</b> dropdown and then <b>Add an Account...</b>. This will require you to enter your Apple Id and password (The app does <b>not</b> store your credentials at any point).
+6. Open Terminal and cd into the downloaded project folder. 
+7. Type gem which cocoapods - This should tell you if you have cocoapods installed or not. If not then run "sudo grm install cocoapods".
+8. Run pod install and wait till the command finishes running.
+9. Now, you can connect your device and run the app by clicking on the play/build & run button in Xcode.
+10. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings->General->Device Management->Your Apple ID->Trust "Your Apple ID"->Trust.
+11. You can now go back to Xcode and run the app again. 
+12. The final step - <b>Enjoy!</b>
 ```
 ##Issues?
 If you face any issues at any point, you can contact us at <jkhanna@usc.edu> or <pranshuk@usc.edu> and we'll help you to the best we can.
