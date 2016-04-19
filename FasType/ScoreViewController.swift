@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 import MultipeerConnectivity
 
-
 class ScoreViewController: UIViewController {
-    
     
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var misMatch: UILabel!
@@ -26,10 +24,8 @@ class ScoreViewController: UIViewController {
     var questionLen: Double!
     var totalTime: String!
     var playerScores = [MCPeerID: Int]()
-    var x: Dictionary<String,String>?
     var data: NSArray = []
     var changeCode: Int = 0
-    
     var numberOfPlayersDone: Int = 0
     
     func min(numbers: Int...) -> Int {
@@ -64,7 +60,6 @@ class ScoreViewController: UIViewController {
             return self.rows
         }
     }
-    
     
     func levenshtein(aStr: String, bStr: String) -> Int {
         let a = Array(aStr.utf16)
@@ -112,8 +107,7 @@ class ScoreViewController: UIViewController {
             
             self.finalScore = round(((questionLen - levScore)/questionLen) * 100)
             
-            //TODO: use 60/40 algo
-            //PJ algo variables - 80/20 algo
+            //PJ algo variables - our 80/20 algo
             let typingAvg = 150 //=> 150 chars/minute
             let typingAvgPerSec = 0.4 //=> 0.4 seconds/char
             let typingAvgCurrentQuestion = questionLen*0.4
@@ -121,34 +115,25 @@ class ScoreViewController: UIViewController {
             var accuracy80 = (finalScore*80)/100
             var time20 = (200 - ((Double(totalTime)! * 100)/typingAvgCurrentQuestion))/5
             
-//            if time20>20{
-//                time20 = 20
-//            }
-            
-            
             finalScore = accuracy80 + time20
+            
             if finalScore<0{
                 finalScore = 0
             }
             
-            
-            
+            //update Score Card UI
             misMatch.text = "Mismatch character(s): \(Int(levScore))"
             timeTaken.text = "You took \(totalTime) seconds"
             userScore.text = "Your score is: \(Int(finalScore)) %"
             
-            
             //update self score to playerScores
             playerScores[appDelegate.mpcHandler.session.myPeerID] = Int(self.finalScore)
-            
-            
             
             //check if all players are on the same page
             var checkPlayerDoneCount: Dictionary<String, String>? = callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=retrieve")
             
             var count = Int(checkPlayerDoneCount!["count"]!)
             
-            //TODO: print loading gif or whatever while the 'while' is still alive
             while(count < appDelegate.mpcHandler.session.connectedPeers.count+1){
                 print("checking status")
                 sleep(1)
@@ -157,10 +142,9 @@ class ScoreViewController: UIViewController {
                 continue
             }
             
-            
             //comes here only when all players are on the same page - aka ready-to-receive-data state
             
-            //now, send player's score to every other player
+            //send self score to every other player
             let messageDict = ["score":Int(self.finalScore)]
             
             do{
@@ -171,107 +155,60 @@ class ScoreViewController: UIViewController {
             }catch let error as NSError {
                 print("An error occurred: \(error)")
             }
-            
         }
-        
     }
-    
     
     //function to handle data receipt
     func handleReceivedDataWithNotification(notification:NSNotification){
-       
-        print("This confirms data receipt in ScoreView")
         
         //extract message from notification
         let userInfo = notification.userInfo! as Dictionary
         let receivedData:NSData = userInfo["data"] as! NSData
         
-//        do {
-            let message = try? NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        let message = try? NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        
+        let senderPeerId:MCPeerID = userInfo["peerID"] as! MCPeerID
+        let senderDisplayName = senderPeerId.displayName
+    
+        //request for new game
+        if message!.objectForKey("status")?.isEqualToString("New Game") == true{
             
-            let senderPeerId:MCPeerID = userInfo["peerID"] as! MCPeerID
-            let senderDisplayName = senderPeerId.displayName
+            changeCode = message!.objectForKey("changeCode")!.integerValue
             
+            let alert1 = UIAlertController(title: "FasType", message: "\(senderDisplayName) has started a new game", preferredStyle: UIAlertControllerStyle.Alert)
             
-            //request for new game
-            if message!.objectForKey("status")?.isEqualToString("New Game") == true{
-                
-                changeCode = message!.objectForKey("changeCode")!.integerValue
-                
-                let alert1 = UIAlertController(title: "FasType", message: "\(senderDisplayName) has started a new game", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                alert1.addAction(
-                    UIAlertAction(title: "Challenge Accepted!", style: UIAlertActionStyle.Default) { (action) -> Void in
-//                        let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
+            alert1.addAction(
+                UIAlertAction(title: "Challenge Accepted!", style: UIAlertActionStyle.Default) { (action) -> Void in
 
-//                        self.playerScores.removeAll()
-                        
-//                        self.newGame()
-                        
-                        //TODO: take each player back to the questions page
-                        self.performSegueWithIdentifier("resetGame", sender: self)
-                        
-                    })
-                
-                self.presentViewController(alert1, animated: true, completion: nil)
-                
-            }
-                
-                
-            //winner chosen
-//            else if message!.objectForKey("winnerChosen")?.isEqualToString("true") == true{
-//
-//                var winner:String = message!.objectForKey("winner") as! String
-//                
-//                let alert = UIAlertController(title: "Results", message: "The winner is \(winner)", preferredStyle: UIAlertControllerStyle.Alert)
-//                
-//                alert.addAction(
-//                    UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default) { (action) -> Void in
-//                        print("")
-//                        print(self.numberOfPlayersDone)
-//                        print(self.playerScores)
-//                        let clearAll: Dictionary<String, String>? = self.dataOfJson("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
-//                    })
-//                
-//                self.presentViewController(alert, animated: true, completion: nil)
-//            }
-                
-                
-            //score receipt
-            else{
-                //var playerId:String? = message!.objectForKey("playerId") as? String
-                
-                //extract score
-                var score:Int = message!.objectForKey("score")!.integerValue
-                
-                //increment player done count
-//                numberOfPlayersDone++
-                
-                print("score received from \(senderDisplayName)")
-                
-                //add player and its score to the dictionary
-                playerScores[senderPeerId] = score
-                
-                checkResults()
-            }
-//        }catch let error as NSError {
-//             print("An error occurred: \(error)")
-//         }
-        
-        
-        
+                    //take each player back to the questions page
+                    self.performSegueWithIdentifier("resetGame", sender: self)
+                    
+                })
+            
+            self.presentViewController(alert1, animated: true, completion: nil)
+            
+        }
+            
+        //score receipt
+        else{
+            
+            var score:Int = message!.objectForKey("score")!.integerValue
+            
+            print("score received from \(senderDisplayName)")
+            
+            //add sender player and its score to the dictionary
+            playerScores[senderPeerId] = score
+            
+            checkResults()
+        }
     }
-    
-    
+
     func checkResults(){
-        
-        print("inside checkResults")
 
         var winner: String = ""
  
         if(playerScores.count == appDelegate.mpcHandler.session.connectedPeers.count+1)
         {
-            
             print("inside checkResults ka IF")
             
             var maxScore: Int = -999999
@@ -279,26 +216,9 @@ class ScoreViewController: UIViewController {
             var checkTie: Int = 0
             var tieScore: Int = 0
             var i: Int = 0
-            
-//            var arrayKeys = Array(playerScores.keys)
-            
-//            var x = arrayKeys[0]
             var flag = 0
-//            
-//            for j in 1...arrayKeys.count{
-//                
-//                if arrayKeys[j] == x{
-//                    continue
-//                }
-//                else{
-//                    flag = 1
-//                    break
-//                }
-//            }
-            
             
             //check for a tie
-            
             for (playerId, score) in playerScores {
                 
                 if(i == 0){
@@ -313,11 +233,8 @@ class ScoreViewController: UIViewController {
                         break
                     }
                 }
-                
             }
 
-            
-            
             //find winner
             for (playerId, score) in playerScores {
                 print("\(score): \(playerId)")
@@ -337,15 +254,15 @@ class ScoreViewController: UIViewController {
                 alert.addAction(
                     UIAlertAction(title: "Huh!", style: UIAlertActionStyle.Default) { (action) -> Void in
                         print("")
-//                        var clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
-//                        self.newGame()
                     })
                 
                 self.presentViewController(alert, animated: true, completion: nil)
             }
-            else{ //if not a tie
+            
+            //if not a tie
+            else{
                 
-                //self alert now
+                //declare winner
                 let alert = UIAlertController(title: "Results", message: "The winner is \(winner)", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 alert.addAction(
@@ -374,33 +291,7 @@ class ScoreViewController: UIViewController {
                     })
                 
                 self.presentViewController(alert, animated: true, completion: nil)
-                
-                //self alert end
-                
-//                let messageDict = ["winnerChosen":"true", "winner": winner]
-//                
-//                let messageData = try? NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted)
-//                
-//                do {
-//                    try? appDelegate.mpcHandler.session.sendData(messageData!, toPeers: appDelegate.mpcHandler.session.connectedPeers, withMode: MCSessionSendDataMode.Reliable)
-//                } catch let error1 as NSError {
-//                    print(error1)
-//                }
-                
-//                let alert = UIAlertController(title: "Results", message: "The winner is \(winner)", preferredStyle: UIAlertControllerStyle.Alert)
-//                
-//                alert.addAction(
-//                    UIAlertAction(title: "Ok! Start Again!", style: UIAlertActionStyle.Default) { (action) -> Void in
-//                        print("")
-//                        self.newGame()
-//                        print(self.numberOfPlayersDone)
-//                        print(self.playerScores)
-//                    })
-//                
-//                self.presentViewController(alert, animated: true, completion: nil)
-                
             }
-
             
         }else{
             //TODO (maybe): alert saying 'waiting for other players to complete"
@@ -423,18 +314,14 @@ class ScoreViewController: UIViewController {
         if changeCode == 0 {
             let clearAll: Dictionary<String, String>? = self.callToScript("https://arcane-depths-56902.herokuapp.com/gameStatus.php?q=clearAll")
         }
-        
-        
     }
     
     func callToScript(url: String) -> Dictionary<String,String>? {
         
         let data = NSData(contentsOfURL: NSURL(string: url)!)
         do {
-            
             var jsonArray = try? NSJSONSerialization.JSONObjectWithData(data!, options: [NSJSONReadingOptions.MutableContainers, NSJSONReadingOptions.AllowFragments]) as? Dictionary<String, String>
             
-//            print("json se count := \(jsonArray!!["count"])")
             if jsonArray == nil{
                 jsonArray = ["":""]
             }
@@ -448,11 +335,11 @@ class ScoreViewController: UIViewController {
     
     //button to view the results
     @IBAction func viewResults(sender: AnyObject) {
+        
         //create message string with the results
         var resultsMessage: String = ""
         
         for (playerId, score) in playerScores {
-            //            print("\(score): \(playerId)")
             resultsMessage += "\(playerId.displayName) scored \(score)% \r\n"
         }
         
@@ -467,11 +354,8 @@ class ScoreViewController: UIViewController {
     
     
     @IBAction func leaveSession(sender: AnyObject) {
-        
         appDelegate.mpcHandler.session.disconnect()
-//        self.performSegueWithIdentifier("resetGame", sender: self)
     }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
@@ -480,9 +364,5 @@ class ScoreViewController: UIViewController {
             let qvc = segue.destinationViewController as! QuestionViewController
             qvc.appDelegate = appDelegate
         }
-        
-//        else if segue.identifier == "leaveSession"{
-//        }
     }
-    
 }
