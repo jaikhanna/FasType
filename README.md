@@ -7,7 +7,7 @@ The app is not available on the AppStore yet, but you can download the code and 
 Note that although this app runs on all iOS devices on iOS 9.0 or greater, we prefer you run it on an iPhone 6/6s/6 Plus/ 6s Plus for the best experience.
 
 #####Steps:
-```
+
 1. Download the source onto your Mac.
 2. Open the downloaded folder and open the file named <b>FasType.xcworkspace</b>. This should open up Xcode and you should now be able to see the project classes and folders.
 3. In the Project Navigator on the left column, click on the highest directory folder named <b>FasType.xcodeproj</b/> and this should open the project settings.
@@ -20,7 +20,7 @@ Note that although this app runs on all iOS devices on iOS 9.0 or greater, we pr
 10. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings->General->Device Management->Your Apple ID->Trust "Your Apple ID"->Trust.
 11. You can now go back to Xcode and run the app again. 
 12. The final step - <b>Enjoy!</b>
-```
+
 ##Issues?
 If you face any issues at any point, you can contact us at <jkhanna@usc.edu> or <pranshuk@usc.edu> and we'll help you to the best we can.
 
