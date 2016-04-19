@@ -17,7 +17,7 @@ Note that although this app runs on all iOS devices on iOS 9.0 or greater, we pr
 7. Type <b>gem which cocoapods</b> - This should tell you if you have cocoapods installed or not. If not then run <b>sudo gem install cocoapods</b>.
 8. Run <b>pod install</b> and wait till the command finishes running.
 9. Now, you can connect your device and run the app by clicking on the play/build & run button in Xcode.
-10. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings->General ->Device Management->Your Apple ID->Trust "Your Apple ID"->Trust.
+10. This might give you an error saying that the developer profile is not trusted. To fix this, go to your device Settings ->General->Device Management->Your Apple ID->Trust "Your Apple ID"->Trust.
 11. You can now go back to Xcode and run the app again. 
 12. The final step - <b>Enjoy!</b>
 
